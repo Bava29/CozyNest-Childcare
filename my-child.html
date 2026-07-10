@@ -1,0 +1,1007 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>CozyNest Childcare</title>
+
+    <meta name="description"
+        content="CozyNest Childcare provides safe, nurturing daycare and baby sitting services with a parent dashboard for live attendance, activity updates, meal logs, and fee payments.">
+
+    <meta name="keywords" content="Childcare, Crèche, Baby Sitting, Daycare, Parent Dashboard, Preschool, Toddler Care">
+
+    <meta name="author" content="CozyNest Childcare">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" sizes="32x32" href="images/logo.png">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Manrope:wght@500;600;700;800&display=swap"
+        rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+    <!-- AOS Animation -->
+    <link rel="stylesheet" href="https://unpkg.com/aos@2.3.4/dist/aos.css">
+
+    <!-- Swiper CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/dashboard.css">
+
+</head>
+
+<body>
+
+
+
+    <!--=========================================
+            DASHBOARD SIDEBAR
+==========================================-->
+
+    <aside class="dashboard-sidebar">
+
+        <!-- Logo -->
+
+        <div class="dashboard-logo">
+
+            <a href="index.html">
+
+                <img src="images/logo.png" alt="CozyNest">
+
+            </a>
+
+        </div>
+
+        <!-- Menu -->
+
+        <ul class="dashboard-menu">
+
+            <li>
+
+                <a href="dashboard.html">
+
+                    <i class="fa-solid fa-house"></i>
+
+                    <span>Dashboard</span>
+
+                </a>
+
+            </li>
+
+            <li>
+
+                <a href="my-child.html" class="active">
+
+                    <i class="fa-solid fa-child-reaching"></i>
+
+                    <span>My Child</span>
+
+                </a>
+
+            </li>
+
+            <li>
+
+                <a href="attendance.html">
+
+                    <i class="fa-solid fa-calendar-check"></i>
+
+                    <span>Attendance</span>
+
+                </a>
+
+            </li>
+
+            <li>
+
+                <a href="activities.html">
+
+                    <i class="fa-solid fa-palette"></i>
+
+                    <span>Daily Activities</span>
+
+                </a>
+
+            </li>
+
+            <li>
+
+                <a href="meals.html">
+
+                    <i class="fa-solid fa-utensils"></i>
+
+                    <span>Meal & Nutrition</span>
+
+                </a>
+
+            </li>
+
+            <li>
+
+                <a href="payments.html">
+
+                    <i class="fa-solid fa-credit-card"></i>
+
+                    <span>Fee Payments</span>
+
+                </a>
+
+            </li>
+
+            <li>
+
+                <a href="messages.html">
+
+                    <i class="fa-solid fa-comments"></i>
+
+                    <span>Messages</span>
+
+                </a>
+
+            </li>
+
+        </ul>
+
+        <!-- Sidebar Extras -->
+
+        <div class="dashboard-sidebar-extras">
+
+            <div class="dashboard-sidebar-top">
+
+                <div class="notification-dropdown">
+
+                    <button class="dashboard-icon-btn notification-btn">
+
+                        <i class="fa-regular fa-bell"></i>
+
+                        <span class="dashboard-badge">3</span>
+
+                    </button>
+
+                    <div class="notification-menu">
+
+                        <h5>Notifications</h5>
+
+                        <ul>
+
+                            <li>
+
+                                <i class="fa-solid fa-user-check"></i>
+
+                                <div>
+
+                                    <strong>Attendance Updated</strong>
+
+                                    <span>Emma checked in at 08:45 AM</span>
+
+                                </div>
+
+                            </li>
+
+                            <li>
+
+                                <i class="fa-solid fa-camera"></i>
+
+                                <div>
+
+                                    <strong>Activity Photos</strong>
+
+                                    <span>4 new photos uploaded</span>
+
+                                </div>
+
+                            </li>
+
+                            <li>
+
+                                <i class="fa-solid fa-utensils"></i>
+
+                                <div>
+
+                                    <strong>Lunch Completed</strong>
+
+                                    <span>Today's meal has been served.</span>
+
+                                </div>
+
+                            </li>
+
+                            <li>
+
+                                <i class="fa-solid fa-comments"></i>
+
+                                <div>
+
+                                    <strong>Teacher Message</strong>
+
+                                    <span>You have one unread message.</span>
+
+                                </div>
+
+                            </li>
+
+                        </ul>
+
+                        <a href="messages.html" class="view-all">
+
+                            View All Notifications
+
+                        </a>
+
+                    </div>
+
+                </div>
+
+                <a href="settings.html" class="dashboard-icon-btn">
+
+                    <i class="fa-solid fa-gear"></i>
+
+                </a>
+
+            </div>
+
+            <div class="dashboard-sidebar-profile">
+
+                <img src="images/parent.jpg" alt="Parent">
+
+                <div>
+
+                    <h6>Sophia Carter</h6>
+                    <span>Parent</span>
+
+                </div>
+
+            </div>
+
+            <div class="dashboard-sidebar-toggles">
+
+                <button class="icon-btn theme-toggle">
+
+                    <i class="fa-solid fa-moon"></i>
+
+                </button>
+
+                <button class="icon-btn rtl-toggle">
+
+                    <i class="fa-solid fa-right-left"></i>
+
+                </button>
+
+            </div>
+
+        </div>
+
+        <!-- Logout -->
+
+        <div class="dashboard-logout">
+
+            <button id="logoutBtn">
+
+                <i class="fa-solid fa-right-from-bracket"></i>
+
+                <span>Logout</span>
+
+            </button>
+
+        </div>
+
+    </aside>
+
+
+    <!--=========================================
+            DASHBOARD HEADER
+==========================================-->
+
+    <main class="dashboard-main">
+
+
+        <header class="dashboard-header">
+
+            <div class="dashboard-header-left">
+
+                <button class="dashboard-menu-toggle" id="dashboardMenuToggle">
+
+                    <i class="fa-solid fa-bars"></i>
+
+                </button>
+
+                <h1 class="dashboard-page-title">
+
+                    My Child
+
+                </h1>
+
+            </div>
+
+            <div class="dashboard-header-right">
+
+                <!-- Notifications -->
+
+                <div class="notification-dropdown">
+
+                    <button class="dashboard-icon-btn notification-btn">
+
+                        <i class="fa-regular fa-bell"></i>
+
+                        <span class="dashboard-badge">3</span>
+
+                    </button>
+
+                    <div class="notification-menu">
+
+                        <h5>Notifications</h5>
+
+                        <ul>
+
+                            <li>
+
+                                <i class="fa-solid fa-user-check"></i>
+
+                                <div>
+
+                                    <strong>Attendance Updated</strong>
+
+                                    <span>Emma checked in at 08:45 AM</span>
+
+                                </div>
+
+                            </li>
+
+                            <li>
+
+                                <i class="fa-solid fa-camera"></i>
+
+                                <div>
+
+                                    <strong>Activity Photos</strong>
+
+                                    <span>4 new photos uploaded</span>
+
+                                </div>
+
+                            </li>
+
+                            <li>
+
+                                <i class="fa-solid fa-utensils"></i>
+
+                                <div>
+
+                                    <strong>Lunch Completed</strong>
+
+                                    <span>Today's meal has been served.</span>
+
+                                </div>
+
+                            </li>
+
+                            <li>
+
+                                <i class="fa-solid fa-comments"></i>
+
+                                <div>
+
+                                    <strong>Teacher Message</strong>
+
+                                    <span>You have one unread message.</span>
+
+                                </div>
+
+                            </li>
+
+                        </ul>
+
+                        <a href="messages.html" class="view-all">
+
+                            View All Notifications
+
+                        </a>
+
+                    </div>
+
+                </div>
+
+                <!-- Settings -->
+
+                <a href="settings.html" class="dashboard-icon-btn">
+
+                    <i class="fa-solid fa-gear"></i>
+
+                </a>
+
+                <button class="icon-btn theme-toggle">
+
+                    <i class="fa-solid fa-moon"></i>
+
+                </button>
+
+                <button class="icon-btn rtl-toggle">
+
+                    <i class="fa-solid fa-right-left"></i>
+
+                </button>
+
+                <!-- Parent Profile -->
+
+                <div class="dashboard-profile">
+
+                    <img src="images/parent.jpg" alt="Parent">
+
+                    <div>
+
+                        <h6>
+
+                            Sophia Carter
+
+                        </h6>
+
+                        <span>
+
+                            Parent
+
+                        </span>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </header>
+
+        <!--=========================================
+        CHILD PROFILE
+==========================================-->
+
+        <section class="child-profile">
+
+            <div class="container-fluid">
+
+                <div class="child-profile-card">
+
+                    <div class="row align-items-center g-5">
+
+                        <!-- Left -->
+
+                        <div class="col-lg-4">
+
+                            <div class="child-image">
+
+                                <img src="images/child.png" alt="Child">
+
+                            </div>
+
+                        </div>
+
+                        <!-- Right -->
+
+                        <div class="col-lg-8">
+
+                            <div class="child-details">
+
+                                <span class="child-badge">
+
+                                    Child Profile
+
+                                </span>
+
+                                <h2>
+
+                                    Emma Carter
+
+                                </h2>
+
+                                <p>
+
+                                    Welcome to your child's profile. Here you can view essential information, classroom
+                                    details, and teacher information.
+
+                                </p>
+
+                                <div class="row g-4">
+
+                                    <div class="col-md-4">
+
+                                        <div class="info-box">
+
+                                            <span>Age</span>
+
+                                            <h5>4 Years</h5>
+
+                                        </div>
+
+                                    </div>
+
+                                    <div class="col-md-4">
+
+                                        <div class="info-box">
+
+                                            <span>Class</span>
+
+                                            <h5>Butterfly</h5>
+
+                                        </div>
+
+                                    </div>
+
+                                    <div class="col-md-4">
+
+                                        <div class="info-box">
+
+                                            <span>Teacher</span>
+
+                                            <h5>Julie</h5>
+
+                                        </div>
+
+                                    </div>
+
+                                    <div class="col-md-4">
+
+                                        <div class="info-box">
+
+                                            <span>Blood Group</span>
+
+                                            <h5>O+</h5>
+
+                                        </div>
+
+                                    </div>
+
+                                    <div class="col-md-4">
+
+                                        <div class="info-box">
+
+                                            <span>Admission</span>
+
+                                            <h5>2025</h5>
+
+                                        </div>
+
+                                    </div>
+
+                                    <div class="col-md-4">
+
+                                        <div class="info-box">
+
+                                            <span>Status</span>
+
+                                            <h5>Active</h5>
+
+                                        </div>
+
+                                    </div>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!--=========================================
+        GROWTH & DEVELOPMENT
+==========================================-->
+
+        <section class="growth-development">
+
+            <div class="container-fluid">
+
+                <div class="section-title mb-5">
+
+                    <span class="section-subtitle">
+
+                        Growth & Development
+
+                    </span>
+
+                    <h2>
+
+                        Track Your Child's Progress
+
+                    </h2>
+
+                    <p>
+
+                        Monitor your child's physical growth and developmental milestones throughout the year.
+
+                    </p>
+
+                </div>
+
+                <div class="row g-4">
+
+                    <!-- Height -->
+
+                    <div class="col-lg-3 col-md-6">
+
+                        <div class="growth-card">
+
+                            <i class="fa-solid fa-ruler-vertical"></i>
+
+                            <h4>Height</h4>
+
+                            <h2>108 cm</h2>
+
+                            <span>Healthy Growth</span>
+
+                        </div>
+
+                    </div>
+
+                    <!-- Weight -->
+
+                    <div class="col-lg-3 col-md-6">
+
+                        <div class="growth-card">
+
+                            <i class="fa-solid fa-weight-scale"></i>
+
+                            <h4>Weight</h4>
+
+                            <h2>18 kg</h2>
+
+                            <span>Normal Range</span>
+
+                        </div>
+
+                    </div>
+
+                    <!-- BMI -->
+
+                    <div class="col-lg-3 col-md-6">
+
+                        <div class="growth-card">
+
+                            <i class="fa-solid fa-heart-pulse"></i>
+
+                            <h4>BMI</h4>
+
+                            <h2>15.4</h2>
+
+                            <span>Healthy</span>
+
+                        </div>
+
+                    </div>
+
+                    <!-- Development -->
+
+                    <div class="col-lg-3 col-md-6">
+
+                        <div class="growth-card">
+
+                            <i class="fa-solid fa-chart-line"></i>
+
+                            <h4>Development</h4>
+
+                            <h2>92%</h2>
+
+                            <span>Excellent Progress</span>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <!-- Progress -->
+
+                <div class="development-progress">
+
+                    <h3>Learning Milestones</h3>
+
+                    <div class="progress-item">
+
+                        <div class="progress-title">
+
+                            <span>Communication Skills</span>
+
+                            <span>90%</span>
+
+                        </div>
+
+                        <div class="progress">
+
+                            <div class="progress-bar bg-success" style="width:90%;"></div>
+
+                        </div>
+
+                    </div>
+
+                    <div class="progress-item">
+
+                        <div class="progress-title">
+
+                            <span>Creativity</span>
+
+                            <span>88%</span>
+
+                        </div>
+
+                        <div class="progress">
+
+                            <div class="progress-bar bg-info" style="width:88%;"></div>
+
+                        </div>
+
+                    </div>
+
+                    <div class="progress-item">
+
+                        <div class="progress-title">
+
+                            <span>Social Skills</span>
+
+                            <span>94%</span>
+
+                        </div>
+
+                        <div class="progress">
+
+                            <div class="progress-bar bg-warning" style="width:94%;"></div>
+
+                        </div>
+
+                    </div>
+
+                    <div class="progress-item">
+
+                        <div class="progress-title">
+
+                            <span>Motor Skills</span>
+
+                            <span>91%</span>
+
+                        </div>
+
+                        <div class="progress">
+
+                            <div class="progress-bar bg-primary" style="width:91%;"></div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+        <!--=========================================
+        MEDICAL & EMERGENCY
+==========================================-->
+
+        <section class="medical-emergency">
+
+            <div class="container-fluid">
+
+                <div class="section-title mb-5">
+
+                    <span class="section-subtitle">
+
+                        Medical & Emergency
+
+                    </span>
+
+                    <h2>
+
+                        Health & Emergency Information
+
+                    </h2>
+
+                    <p>
+
+                        View your child's health records, allergies, vaccinations, and emergency contact information.
+
+                    </p>
+
+                </div>
+
+                <div class="row g-4">
+
+                    <!-- Health Information -->
+
+                    <div class="col-lg-6">
+
+                        <div class="medical-card">
+
+                            <h3>
+
+                                <i class="fa-solid fa-heart-pulse"></i>
+
+                                Health Information
+
+                            </h3>
+
+                            <ul class="medical-list">
+
+                                <li>
+
+                                    <span>Blood Group</span>
+
+                                    <strong>O+</strong>
+
+                                </li>
+
+                                <li>
+
+                                    <span>Allergies</span>
+
+                                    <strong>None</strong>
+
+                                </li>
+
+                                <li>
+
+                                    <span>Medical Condition</span>
+
+                                    <strong>Healthy</strong>
+
+                                </li>
+
+                                <li>
+
+                                    <span>Vaccination</span>
+
+                                    <strong>Completed</strong>
+
+                                </li>
+
+                            </ul>
+
+                        </div>
+
+                    </div>
+
+                    <!-- Emergency Contact -->
+
+                    <div class="col-lg-6">
+
+                        <div class="medical-card">
+
+                            <h3>
+
+                                <i class="fa-solid fa-phone-volume"></i>
+
+                                Emergency Contact
+
+                            </h3>
+
+                            <ul class="medical-list">
+
+                                <li>
+
+                                    <span>Parent Name</span>
+
+                                    <strong>Sophia Carter</strong>
+
+                                </li>
+
+                                <li>
+
+                                    <span>Phone Number</span>
+
+                                    <strong>+91 98765 43210</strong>
+
+                                </li>
+
+                                <li>
+
+                                    <span>Relationship</span>
+
+                                    <strong>Mother</strong>
+
+                                </li>
+
+                                <li>
+
+                                    <span>Authorized Pickup</span>
+
+                                    <strong>David Carter</strong>
+
+                                </li>
+
+                            </ul>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+    </main>
+
+    <!--=========================================
+        LOGOUT MODAL
+==========================================-->
+
+    <div class="logout-modal" id="logoutModal">
+
+        <div class="logout-modal-content">
+
+            <div class="logout-icon">
+
+                <i class="fa-solid fa-right-from-bracket"></i>
+
+            </div>
+
+            <h3>
+
+                Logout
+
+            </h3>
+
+            <p>
+
+                Are you sure you want to logout from your account?
+
+            </p>
+
+            <div class="logout-buttons">
+
+                <button class="logout-cancel" id="cancelLogout">
+
+                    No
+
+                </button>
+
+                <button class="logout-confirm" id="confirmLogout">
+
+                    Yes
+
+                </button>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- AOS JS -->
+    <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+
+    <!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+    <!-- Custom JS -->
+    <script src="js/main.js"></script>
+
+
+
+</body>
+
+</html>

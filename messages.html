@@ -1,0 +1,909 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>CozyNest Childcare</title>
+
+    <meta name="description"
+        content="CozyNest Childcare provides safe, nurturing daycare and baby sitting services with a parent dashboard for live attendance, activity updates, meal logs, and fee payments.">
+
+    <meta name="keywords" content="Childcare, Crèche, Baby Sitting, Daycare, Parent Dashboard, Preschool, Toddler Care">
+
+    <meta name="author" content="CozyNest Childcare">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" sizes="32x32" href="images/logo.png">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Manrope:wght@500;600;700;800&display=swap"
+        rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+    <!-- AOS Animation -->
+    <link rel="stylesheet" href="https://unpkg.com/aos@2.3.4/dist/aos.css">
+
+    <!-- Swiper CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/dashboard.css">
+
+</head>
+
+<body>
+
+
+
+    <!--=========================================
+            DASHBOARD SIDEBAR
+==========================================-->
+
+    <aside class="dashboard-sidebar">
+
+        <!-- Logo -->
+
+        <div class="dashboard-logo">
+
+            <a href="index.html">
+
+                <img src="images/logo.png" alt="CozyNest">
+
+            </a>
+
+        </div>
+
+        <!-- Menu -->
+
+        <ul class="dashboard-menu">
+
+            <li>
+
+                <a href="dashboard.html">
+
+                    <i class="fa-solid fa-house"></i>
+
+                    <span>Dashboard</span>
+
+                </a>
+
+            </li>
+
+            <li>
+
+                <a href="my-child.html">
+
+                    <i class="fa-solid fa-child-reaching"></i>
+
+                    <span>My Child</span>
+
+                </a>
+
+            </li>
+
+            <li>
+
+                <a href="attendance.html">
+
+                    <i class="fa-solid fa-calendar-check"></i>
+
+                    <span>Attendance</span>
+
+                </a>
+
+            </li>
+
+            <li>
+
+                <a href="activities.html">
+
+                    <i class="fa-solid fa-palette"></i>
+
+                    <span>Daily Activities</span>
+
+                </a>
+
+            </li>
+
+            <li>
+
+                <a href="meals.html">
+
+                    <i class="fa-solid fa-utensils"></i>
+
+                    <span>Meal & Nutrition</span>
+
+                </a>
+
+            </li>
+
+            <li>
+
+                <a href="payments.html">
+
+                    <i class="fa-solid fa-credit-card"></i>
+
+                    <span>Fee Payments</span>
+
+                </a>
+
+            </li>
+
+            <li>
+
+                <a href="messages.html" class="active">
+
+                    <i class="fa-solid fa-comments"></i>
+
+                    <span>Messages</span>
+
+                </a>
+
+            </li>
+
+        </ul>
+
+        <!-- Sidebar Extras -->
+
+        <div class="dashboard-sidebar-extras">
+
+            <div class="dashboard-sidebar-top">
+
+                <div class="notification-dropdown">
+
+                    <button class="dashboard-icon-btn notification-btn">
+
+                        <i class="fa-regular fa-bell"></i>
+
+                        <span class="dashboard-badge">3</span>
+
+                    </button>
+
+                    <div class="notification-menu">
+
+                        <h5>Notifications</h5>
+
+                        <ul>
+
+                            <li>
+
+                                <i class="fa-solid fa-user-check"></i>
+
+                                <div>
+
+                                    <strong>Attendance Updated</strong>
+
+                                    <span>Emma checked in at 08:45 AM</span>
+
+                                </div>
+
+                            </li>
+
+                            <li>
+
+                                <i class="fa-solid fa-camera"></i>
+
+                                <div>
+
+                                    <strong>Activity Photos</strong>
+
+                                    <span>4 new photos uploaded</span>
+
+                                </div>
+
+                            </li>
+
+                            <li>
+
+                                <i class="fa-solid fa-utensils"></i>
+
+                                <div>
+
+                                    <strong>Lunch Completed</strong>
+
+                                    <span>Today's meal has been served.</span>
+
+                                </div>
+
+                            </li>
+
+                            <li>
+
+                                <i class="fa-solid fa-comments"></i>
+
+                                <div>
+
+                                    <strong>Teacher Message</strong>
+
+                                    <span>You have one unread message.</span>
+
+                                </div>
+
+                            </li>
+
+                        </ul>
+
+                        <a href="messages.html" class="view-all">
+
+                            View All Notifications
+
+                        </a>
+
+                    </div>
+
+                </div>
+
+                <a href="settings.html" class="dashboard-icon-btn">
+
+                    <i class="fa-solid fa-gear"></i>
+
+                </a>
+
+            </div>
+
+            <div class="dashboard-sidebar-profile">
+
+                <img src="images/parent.jpg" alt="Parent">
+
+                <div>
+
+                    <h6>Sophia Carter</h6>
+                    <span>Parent</span>
+
+                </div>
+
+            </div>
+
+            <div class="dashboard-sidebar-toggles">
+
+                <button class="icon-btn theme-toggle">
+
+                    <i class="fa-solid fa-moon"></i>
+
+                </button>
+
+                <button class="icon-btn rtl-toggle">
+
+                    <i class="fa-solid fa-right-left"></i>
+
+                </button>
+
+            </div>
+
+        </div>
+
+        <!-- Logout -->
+
+        <div class="dashboard-logout">
+
+            <button id="logoutBtn">
+
+                <i class="fa-solid fa-right-from-bracket"></i>
+
+                <span>Logout</span>
+
+            </button>
+
+        </div>
+
+    </aside>
+
+
+    <!--=========================================
+            DASHBOARD HEADER
+==========================================-->
+
+    <main class="dashboard-main">
+
+
+        <header class="dashboard-header">
+
+            <div class="dashboard-header-left">
+
+                <button class="dashboard-menu-toggle" id="dashboardMenuToggle">
+
+                    <i class="fa-solid fa-bars"></i>
+
+                </button>
+
+                <h1 class="dashboard-page-title">
+
+                    Messages
+
+                </h1>
+
+            </div>
+
+            <div class="dashboard-header-right">
+
+                <!-- Notifications -->
+
+                <div class="notification-dropdown">
+
+                    <button class="dashboard-icon-btn notification-btn">
+
+                        <i class="fa-regular fa-bell"></i>
+
+                        <span class="dashboard-badge">3</span>
+
+                    </button>
+
+                    <div class="notification-menu">
+
+                        <h5>Notifications</h5>
+
+                        <ul>
+
+                            <li>
+
+                                <i class="fa-solid fa-user-check"></i>
+
+                                <div>
+
+                                    <strong>Attendance Updated</strong>
+
+                                    <span>Emma checked in at 08:45 AM</span>
+
+                                </div>
+
+                            </li>
+
+                            <li>
+
+                                <i class="fa-solid fa-camera"></i>
+
+                                <div>
+
+                                    <strong>Activity Photos</strong>
+
+                                    <span>4 new photos uploaded</span>
+
+                                </div>
+
+                            </li>
+
+                            <li>
+
+                                <i class="fa-solid fa-utensils"></i>
+
+                                <div>
+
+                                    <strong>Lunch Completed</strong>
+
+                                    <span>Today's meal has been served.</span>
+
+                                </div>
+
+                            </li>
+
+                            <li>
+
+                                <i class="fa-solid fa-comments"></i>
+
+                                <div>
+
+                                    <strong>Teacher Message</strong>
+
+                                    <span>You have one unread message.</span>
+
+                                </div>
+
+                            </li>
+
+                        </ul>
+
+                        <a href="messages.html" class="view-all">
+
+                            View All Notifications
+
+                        </a>
+
+                    </div>
+
+                </div>
+
+
+                <!-- Settings -->
+
+                <a href="settings.html" class="dashboard-icon-btn">
+
+                    <i class="fa-solid fa-gear"></i>
+
+                </a>
+
+                <button class="icon-btn theme-toggle">
+
+                    <i class="fa-solid fa-moon"></i>
+
+                </button>
+
+                <button class="icon-btn rtl-toggle">
+
+                    <i class="fa-solid fa-right-left"></i>
+
+                </button>
+
+
+                <!-- Parent Profile -->
+
+                <div class="dashboard-profile">
+
+                    <img src="images/parent.jpg" alt="Parent">
+
+                    <div>
+
+                        <h6>
+
+                            Sophia Carter
+
+                        </h6>
+
+                        <span>
+
+                            Parent
+
+                        </span>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </header>
+
+        <!--=========================================
+        TEACHER CONTACTS
+==========================================-->
+
+        <section class="teacher-contacts">
+
+            <div class="container-fluid">
+
+                <div class="section-title mb-5">
+
+                    <span class="section-subtitle">
+
+                        Messages
+
+                    </span>
+
+                    <h2>
+
+                        Contact Your Child's Teachers
+
+                    </h2>
+
+                    <p>
+
+                        Stay connected with teachers through direct messages and receive timely updates.
+
+                    </p>
+
+                </div>
+
+                <div class="row g-4">
+
+                    <!-- Teacher -->
+
+                    <div class="col-lg-4">
+
+                        <div class="teacher-contact-card active">
+
+                            <img src="images/teacher-1.jpg" alt="Teacher">
+
+                            <h4>Ms. Sophia Johnson</h4>
+
+                            <span>Class Teacher</span>
+
+                            <p>Usually replies within 30 minutes.</p>
+
+                            <a href="#" class="primary-btn">
+
+                                Open Chat
+
+                            </a>
+
+                        </div>
+
+                    </div>
+
+                    <!-- Teacher -->
+
+                    <div class="col-lg-4">
+
+                        <div class="teacher-contact-card">
+
+                            <img src="images/teacher-2.jpg" alt="Teacher">
+
+                            <h4>Mr. David Miller</h4>
+
+                            <span>Activity Coordinator</span>
+
+                            <p>Available during school timings.</p>
+
+                            <a href="#" class="secondary-btn">
+
+                                Send Message
+
+                            </a>
+
+                        </div>
+
+                    </div>
+
+                    <!-- Teacher -->
+
+                    <div class="col-lg-4">
+
+                        <div class="teacher-contact-card">
+
+                            <img src="images/teacher-3.jpg" alt="Teacher">
+
+                            <h4>Mrs. Emily Brown</h4>
+
+                            <span>Nutrition Coordinator</span>
+
+                            <p>For meal and nutrition updates.</p>
+
+                            <a href="#" class="secondary-btn">
+
+                                Send Message
+
+                            </a>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+        <!--=========================================
+        CHAT WINDOW
+==========================================-->
+
+        <section class="chat-window-section">
+
+            <div class="container-fluid">
+
+                <div class="chat-window">
+
+                    <!-- Header -->
+
+                    <div class="chat-header">
+
+                        <div class="chat-user">
+
+                            <img src="images/teacher.jpg" alt="Teacher">
+
+                            <div>
+
+                                <h4>Ms. Julie</h4>
+
+                                <span>Class Teacher • Online</span>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                    <!-- Messages -->
+
+                    <div class="chat-body">
+
+                        <div class="chat-message teacher">
+
+                            <p>
+
+                                Good morning! Emma actively participated in today's storytelling session.
+
+                            </p>
+
+                            <span>09:30 AM</span>
+
+                        </div>
+
+                        <div class="chat-message parent">
+
+                            <p>
+
+                                That's wonderful! Thank you for the update.
+
+                            </p>
+
+                            <span>09:34 AM</span>
+
+                        </div>
+
+                        <div class="chat-message teacher">
+
+                            <p>
+
+                                She also completed her art activity beautifully. I've uploaded a few photos.
+
+                            </p>
+
+                            <span>11:45 AM</span>
+
+                        </div>
+
+                        <div class="chat-message parent">
+
+                            <p>
+
+                                I just saw them. They look amazing! 😊
+
+                            </p>
+
+                            <span>11:50 AM</span>
+
+                        </div>
+
+                    </div>
+
+                    <!-- Input -->
+
+                    <div class="chat-footer">
+
+                        <input type="text" placeholder="Type your message...">
+
+                        <button class="primary-btn">
+
+                            <i class="fa-solid fa-paper-plane"></i>
+
+                            Send
+
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+        <!--=========================================
+        ANNOUNCEMENTS & EVENTS
+==========================================-->
+
+        <section class="announcements-section">
+
+            <div class="container-fluid">
+
+                <div class="section-title mb-5">
+
+                    <span class="section-subtitle">
+
+                        Announcements
+
+                    </span>
+
+                    <h2>
+
+                        School Announcements & Upcoming Events
+
+                    </h2>
+
+                    <p>
+
+                        Stay updated with important notices, upcoming activities, and special events at CozyNest.
+
+                    </p>
+
+                </div>
+
+                <div class="row g-4">
+
+                    <!-- Announcement -->
+
+                    <div class="col-lg-6">
+
+                        <div class="announcement-card">
+
+                            <div class="announcement-icon">
+
+                                <i class="fa-solid fa-bullhorn"></i>
+
+                            </div>
+
+                            <div>
+
+                                <h4>Parent-Teacher Meeting</h4>
+
+                                <p>
+
+                                    The monthly parent-teacher meeting is scheduled for <strong>15 July 2026</strong> at
+                                    10:00 AM.
+
+                                </p>
+
+                                <span>Posted 2 days ago</span>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                    <!-- Announcement -->
+
+                    <div class="col-lg-6">
+
+                        <div class="announcement-card">
+
+                            <div class="announcement-icon">
+
+                                <i class="fa-solid fa-trophy"></i>
+
+                            </div>
+
+                            <div>
+
+                                <h4>Annual Sports Day</h4>
+
+                                <p>
+
+                                    Join us for a fun-filled Sports Day with exciting games and activities for children.
+
+                                </p>
+
+                                <span>20 July 2026</span>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                    <!-- Announcement -->
+
+                    <div class="col-lg-6">
+
+                        <div class="announcement-card">
+
+                            <div class="announcement-icon">
+
+                                <i class="fa-solid fa-tree"></i>
+
+                            </div>
+
+                            <div>
+
+                                <h4>Nature Exploration Trip</h4>
+
+                                <p>
+
+                                    Children will visit the botanical garden to learn about plants and nature.
+
+                                </p>
+
+                                <span>25 July 2026</span>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                    <!-- Announcement -->
+
+                    <div class="col-lg-6">
+
+                        <div class="announcement-card">
+
+                            <div class="announcement-icon">
+
+                                <i class="fa-solid fa-circle-info"></i>
+
+                            </div>
+
+                            <div>
+
+                                <h4>Holiday Notice</h4>
+
+                                <p>
+
+                                    CozyNest will remain closed on 30 July due to a public holiday.
+
+                                </p>
+
+                                <span>Important Notice</span>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+    <!--=========================================
+        LOGOUT MODAL
+==========================================-->
+
+    <div class="logout-modal" id="logoutModal">
+
+        <div class="logout-modal-content">
+
+            <div class="logout-icon">
+
+                <i class="fa-solid fa-right-from-bracket"></i>
+
+            </div>
+
+            <h3>
+
+                Logout
+
+            </h3>
+
+            <p>
+
+                Are you sure you want to logout from your account?
+
+            </p>
+
+            <div class="logout-buttons">
+
+                <button class="logout-cancel" id="cancelLogout">
+
+                    No
+
+                </button>
+
+                <button class="logout-confirm" id="confirmLogout">
+
+                    Yes
+
+                </button>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- AOS JS -->
+    <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+
+    <!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+    <!-- Custom JS -->
+    <script src="js/main.js"></script>
+
+
+
+</body>
+
+</html>

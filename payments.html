@@ -1,0 +1,980 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>CozyNest Childcare</title>
+
+    <meta name="description"
+        content="CozyNest Childcare provides safe, nurturing daycare and baby sitting services with a parent dashboard for live attendance, activity updates, meal logs, and fee payments.">
+
+    <meta name="keywords" content="Childcare, Crèche, Baby Sitting, Daycare, Parent Dashboard, Preschool, Toddler Care">
+
+    <meta name="author" content="CozyNest Childcare">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" sizes="32x32" href="images/logo.png">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Manrope:wght@500;600;700;800&display=swap"
+        rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+    <!-- AOS Animation -->
+    <link rel="stylesheet" href="https://unpkg.com/aos@2.3.4/dist/aos.css">
+
+    <!-- Swiper CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/dashboard.css">
+
+</head>
+
+<body>
+
+
+
+    <!--=========================================
+            DASHBOARD SIDEBAR
+==========================================-->
+
+    <aside class="dashboard-sidebar">
+
+        <!-- Logo -->
+
+        <div class="dashboard-logo">
+
+            <a href="index.html">
+
+                <img src="images/logo.png" alt="CozyNest">
+
+            </a>
+
+        </div>
+
+        <!-- Menu -->
+
+        <ul class="dashboard-menu">
+
+            <li>
+
+                <a href="dashboard.html">
+
+                    <i class="fa-solid fa-house"></i>
+
+                    <span>Dashboard</span>
+
+                </a>
+
+            </li>
+
+            <li>
+
+                <a href="my-child.html">
+
+                    <i class="fa-solid fa-child-reaching"></i>
+
+                    <span>My Child</span>
+
+                </a>
+
+            </li>
+
+            <li>
+
+                <a href="attendance.html">
+
+                    <i class="fa-solid fa-calendar-check"></i>
+
+                    <span>Attendance</span>
+
+                </a>
+
+            </li>
+
+            <li>
+
+                <a href="activities.html">
+
+                    <i class="fa-solid fa-palette"></i>
+
+                    <span>Daily Activities</span>
+
+                </a>
+
+            </li>
+
+            <li>
+
+                <a href="meals.html">
+
+                    <i class="fa-solid fa-utensils"></i>
+
+                    <span>Meal & Nutrition</span>
+
+                </a>
+
+            </li>
+
+            <li>
+
+                <a href="payments.html" class="active">
+
+                    <i class="fa-solid fa-credit-card"></i>
+
+                    <span>Fee Payments</span>
+
+                </a>
+
+            </li>
+
+            <li>
+
+                <a href="messages.html">
+
+                    <i class="fa-solid fa-comments"></i>
+
+                    <span>Messages</span>
+
+                </a>
+
+            </li>
+
+        </ul>
+
+        <!-- Sidebar Extras -->
+
+        <div class="dashboard-sidebar-extras">
+
+            <div class="dashboard-sidebar-top">
+
+                <div class="notification-dropdown">
+
+                    <button class="dashboard-icon-btn notification-btn">
+
+                        <i class="fa-regular fa-bell"></i>
+
+                        <span class="dashboard-badge">3</span>
+
+                    </button>
+
+                    <div class="notification-menu">
+
+                        <h5>Notifications</h5>
+
+                        <ul>
+
+                            <li>
+
+                                <i class="fa-solid fa-user-check"></i>
+
+                                <div>
+
+                                    <strong>Attendance Updated</strong>
+
+                                    <span>Emma checked in at 08:45 AM</span>
+
+                                </div>
+
+                            </li>
+
+                            <li>
+
+                                <i class="fa-solid fa-camera"></i>
+
+                                <div>
+
+                                    <strong>Activity Photos</strong>
+
+                                    <span>4 new photos uploaded</span>
+
+                                </div>
+
+                            </li>
+
+                            <li>
+
+                                <i class="fa-solid fa-utensils"></i>
+
+                                <div>
+
+                                    <strong>Lunch Completed</strong>
+
+                                    <span>Today's meal has been served.</span>
+
+                                </div>
+
+                            </li>
+
+                            <li>
+
+                                <i class="fa-solid fa-comments"></i>
+
+                                <div>
+
+                                    <strong>Teacher Message</strong>
+
+                                    <span>You have one unread message.</span>
+
+                                </div>
+
+                            </li>
+
+                        </ul>
+
+                        <a href="messages.html" class="view-all">
+
+                            View All Notifications
+
+                        </a>
+
+                    </div>
+
+                </div>
+
+                <a href="settings.html" class="dashboard-icon-btn">
+
+                    <i class="fa-solid fa-gear"></i>
+
+                </a>
+
+            </div>
+
+            <div class="dashboard-sidebar-profile">
+
+                <img src="images/parent.jpg" alt="Parent">
+
+                <div>
+
+                    <h6>Sophia Carter</h6>
+                    <span>Parent</span>
+
+                </div>
+
+            </div>
+
+            <div class="dashboard-sidebar-toggles">
+
+                <button class="icon-btn theme-toggle">
+
+                    <i class="fa-solid fa-moon"></i>
+
+                </button>
+
+                <button class="icon-btn rtl-toggle">
+
+                    <i class="fa-solid fa-right-left"></i>
+
+                </button>
+
+            </div>
+
+        </div>
+
+        <!-- Logout -->
+
+        <div class="dashboard-logout">
+
+            <button id="logoutBtn">
+
+                <i class="fa-solid fa-right-from-bracket"></i>
+
+                <span>Logout</span>
+
+            </button>
+
+        </div>
+
+    </aside>
+
+
+    <!--=========================================
+            DASHBOARD HEADER
+==========================================-->
+
+    <main class="dashboard-main">
+
+
+        <header class="dashboard-header">
+
+            <div class="dashboard-header-left">
+
+                <button class="dashboard-menu-toggle" id="dashboardMenuToggle">
+
+                    <i class="fa-solid fa-bars"></i>
+
+                </button>
+
+                <h1 class="dashboard-page-title">
+
+                    Payments
+
+                </h1>
+
+            </div>
+
+            <div class="dashboard-header-right">
+
+                <!-- Notifications -->
+
+                <div class="notification-dropdown">
+
+                    <button class="dashboard-icon-btn notification-btn">
+
+                        <i class="fa-regular fa-bell"></i>
+
+                        <span class="dashboard-badge">3</span>
+
+                    </button>
+
+                    <div class="notification-menu">
+
+                        <h5>Notifications</h5>
+
+                        <ul>
+
+                            <li>
+
+                                <i class="fa-solid fa-user-check"></i>
+
+                                <div>
+
+                                    <strong>Attendance Updated</strong>
+
+                                    <span>Emma checked in at 08:45 AM</span>
+
+                                </div>
+
+                            </li>
+
+                            <li>
+
+                                <i class="fa-solid fa-camera"></i>
+
+                                <div>
+
+                                    <strong>Activity Photos</strong>
+
+                                    <span>4 new photos uploaded</span>
+
+                                </div>
+
+                            </li>
+
+                            <li>
+
+                                <i class="fa-solid fa-utensils"></i>
+
+                                <div>
+
+                                    <strong>Lunch Completed</strong>
+
+                                    <span>Today's meal has been served.</span>
+
+                                </div>
+
+                            </li>
+
+                            <li>
+
+                                <i class="fa-solid fa-comments"></i>
+
+                                <div>
+
+                                    <strong>Teacher Message</strong>
+
+                                    <span>You have one unread message.</span>
+
+                                </div>
+
+                            </li>
+
+                        </ul>
+
+                        <a href="messages.html" class="view-all">
+
+                            View All Notifications
+
+                        </a>
+
+                    </div>
+
+                </div>
+
+                <!-- Settings -->
+
+                <a href="settings.html" class="dashboard-icon-btn">
+
+                    <i class="fa-solid fa-gear"></i>
+
+                </a>
+
+                <button class="icon-btn theme-toggle">
+
+                    <i class="fa-solid fa-moon"></i>
+
+                </button>
+
+                <button class="icon-btn rtl-toggle">
+
+                    <i class="fa-solid fa-right-left"></i>
+
+                </button>
+
+
+                <!-- Parent Profile -->
+
+                <div class="dashboard-profile">
+
+                    <img src="images/parent.jpg" alt="Parent">
+
+                    <div>
+
+                        <h6>
+
+                            Sophia Carter
+
+                        </h6>
+
+                        <span>
+
+                            Parent
+
+                        </span>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </header>
+
+        <!--=========================================
+        PAYMENT OVERVIEW
+==========================================-->
+
+        <section class="payment-overview">
+
+            <div class="container-fluid">
+
+                <div class="section-title mb-5">
+
+                    <span class="section-subtitle">
+
+                        Fee Payments
+
+                    </span>
+
+                    <h2>
+
+                        Payment Overview
+
+                    </h2>
+
+                    <p>
+
+                        Easily track your child's fee payments, upcoming dues, and payment status.
+
+                    </p>
+
+                </div>
+
+                <div class="row g-4">
+
+                    <!-- Total Fees -->
+
+                    <div class="col-xl-3 col-md-6">
+
+                        <div class="payment-card">
+
+                            <div class="payment-icon">
+
+                                <i class="fa-solid fa-wallet"></i>
+
+                            </div>
+
+                            <span>Total Fees</span>
+
+                            <h3>₹48,000</h3>
+
+                            <p>Academic Year</p>
+
+                        </div>
+
+                    </div>
+
+                    <!-- Paid -->
+
+                    <div class="col-xl-3 col-md-6">
+
+                        <div class="payment-card">
+
+                            <div class="payment-icon paid">
+
+                                <i class="fa-solid fa-circle-check"></i>
+
+                            </div>
+
+                            <span>Paid</span>
+
+                            <h3>₹36,000</h3>
+
+                            <p>Completed</p>
+
+                        </div>
+
+                    </div>
+
+                    <!-- Pending -->
+
+                    <div class="col-xl-3 col-md-6">
+
+                        <div class="payment-card">
+
+                            <div class="payment-icon pending">
+
+                                <i class="fa-solid fa-clock"></i>
+
+                            </div>
+
+                            <span>Pending</span>
+
+                            <h3>₹12,000</h3>
+
+                            <p>Due This Month</p>
+
+                        </div>
+
+                    </div>
+
+                    <!-- Due Date -->
+
+                    <div class="col-xl-3 col-md-6">
+
+                        <div class="payment-card">
+
+                            <div class="payment-icon">
+
+                                <i class="fa-solid fa-calendar-days"></i>
+
+                            </div>
+
+                            <span>Due Date</span>
+
+                            <h3>15 Jul</h3>
+
+                            <p>Next Payment</p>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!--=========================================
+        PAYMENT HISTORY
+==========================================-->
+
+        <section class="payment-history">
+
+            <div class="container-fluid">
+
+                <div class="section-title mb-5">
+
+                    <span class="section-subtitle">
+
+                        Payment History
+
+                    </span>
+
+                    <h2>
+
+                        Recent Payment Transactions
+
+                    </h2>
+
+                    <p>
+
+                        View your recent fee payments, transaction details, and payment status.
+
+                    </p>
+
+                </div>
+
+                <div class="history-wrapper">
+
+                    <!-- Item -->
+
+                    <div class="payment-history-card">
+
+                        <div class="payment-left">
+
+                            <div class="payment-history-icon">
+
+                                <i class="fa-solid fa-credit-card"></i>
+
+                            </div>
+
+                            <div>
+
+                                <h4>July 2026 Tuition Fee</h4>
+
+                                <span>Transaction ID : TXN45896231</span>
+
+                            </div>
+
+                        </div>
+
+                        <div class="payment-middle">
+
+                            <strong>₹12,000</strong>
+
+                            <small>Paid via UPI</small>
+
+                        </div>
+
+                        <div class="payment-right">
+
+                            <span class="payment-status paid">
+
+                                Paid
+
+                            </span>
+
+                            <small>05 Jul 2026</small>
+
+                        </div>
+
+                    </div>
+
+                    <!-- Item -->
+
+                    <div class="payment-history-card">
+
+                        <div class="payment-left">
+
+                            <div class="payment-history-icon">
+
+                                <i class="fa-solid fa-credit-card"></i>
+
+                            </div>
+
+                            <div>
+
+                                <h4>June 2026 Tuition Fee</h4>
+
+                                <span>Transaction ID : TXN45874216</span>
+
+                            </div>
+
+                        </div>
+
+                        <div class="payment-middle">
+
+                            <strong>₹12,000</strong>
+
+                            <small>Paid via Card</small>
+
+                        </div>
+
+                        <div class="payment-right">
+
+                            <span class="payment-status paid">
+
+                                Paid
+
+                            </span>
+
+                            <small>05 Jun 2026</small>
+
+                        </div>
+
+                    </div>
+
+                    <!-- Item -->
+
+                    <div class="payment-history-card">
+
+                        <div class="payment-left">
+
+                            <div class="payment-history-icon">
+
+                                <i class="fa-solid fa-credit-card"></i>
+
+                            </div>
+
+                            <div>
+
+                                <h4>August 2026 Tuition Fee</h4>
+
+                                <span>Transaction ID : TXN45899874</span>
+
+                            </div>
+
+                        </div>
+
+                        <div class="payment-middle">
+
+                            <strong>₹12,000</strong>
+
+                            <small>Upcoming</small>
+
+                        </div>
+
+                        <div class="payment-right">
+
+                            <span class="payment-status pending">
+
+                                Pending
+
+                            </span>
+
+                            <small>Due : 15 Aug</small>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+        <!--=========================================
+        INVOICES & RECEIPTS
+==========================================-->
+
+        <section class="invoice-receipts">
+
+            <div class="container-fluid">
+
+                <div class="section-title mb-5">
+
+                    <span class="section-subtitle">
+
+                        Invoices & Receipts
+
+                    </span>
+
+                    <h2>
+
+                        Download Payment Documents
+
+                    </h2>
+
+                    <p>
+
+                        Access invoices and payment receipts anytime for your records.
+
+                    </p>
+
+                </div>
+
+                <div class="row g-4">
+
+                    <!-- Receipt -->
+
+                    <div class="col-lg-4">
+
+                        <div class="invoice-card">
+
+                            <div class="invoice-icon">
+
+                                <i class="fa-solid fa-file-invoice-dollar"></i>
+
+                            </div>
+
+                            <h4>July 2026 Receipt</h4>
+
+                            <p>
+
+                                Receipt No : RC-2026-0715
+
+                            </p>
+
+                            <span class="invoice-status paid">
+
+                                Paid
+
+                            </span>
+
+                            <a href="#" class="primary-btn">
+
+                                <i class="fa-solid fa-download"></i>
+
+                                Download PDF
+
+                            </a>
+
+                        </div>
+
+                    </div>
+
+                    <!-- Invoice -->
+
+                    <div class="col-lg-4">
+
+                        <div class="invoice-card">
+
+                            <div class="invoice-icon">
+
+                                <i class="fa-solid fa-file-lines"></i>
+
+                            </div>
+
+                            <h4>August 2026 Invoice</h4>
+
+                            <p>
+
+                                Invoice No : INV-2026-0815
+
+                            </p>
+
+                            <span class="invoice-status pending">
+
+                                Pending
+
+                            </span>
+
+                            <a href="#" class="secondary-btn">
+
+                                View Invoice
+
+                            </a>
+
+                        </div>
+
+                    </div>
+
+                    <!-- Annual Report -->
+
+                    <div class="col-lg-4">
+
+                        <div class="invoice-card">
+
+                            <div class="invoice-icon">
+
+                                <i class="fa-solid fa-folder-open"></i>
+
+                            </div>
+
+                            <h4>Annual Statement</h4>
+
+                            <p>
+
+                                Academic Year 2026
+
+                            </p>
+
+                            <span class="invoice-status completed">
+
+                                Available
+
+                            </span>
+
+                            <a href="#" class="primary-btn">
+
+                                <i class="fa-solid fa-download"></i>
+
+                                Download
+
+                            </a>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+    <!--=========================================
+        LOGOUT MODAL
+==========================================-->
+
+    <div class="logout-modal" id="logoutModal">
+
+        <div class="logout-modal-content">
+
+            <div class="logout-icon">
+
+                <i class="fa-solid fa-right-from-bracket"></i>
+
+            </div>
+
+            <h3>
+
+                Logout
+
+            </h3>
+
+            <p>
+
+                Are you sure you want to logout from your account?
+
+            </p>
+
+            <div class="logout-buttons">
+
+                <button class="logout-cancel" id="cancelLogout">
+
+                    No
+
+                </button>
+
+                <button class="logout-confirm" id="confirmLogout">
+
+                    Yes
+
+                </button>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- AOS JS -->
+    <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+
+    <!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+    <!-- Custom JS -->
+    <script src="js/main.js"></script>
+
+
+
+</body>
+
+</html>

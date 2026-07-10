@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Register | CozyNest Childcare</title>
+
+    <meta name="description"
+        content="Create a CozyNest Childcare account to book care, follow updates, and manage your family's childcare experience.">
+
+    <meta name="keywords" content="CozyNest, register, signup, childcare, daycare, parent dashboard">
+
+    <meta name="author" content="CozyNest Childcare">
+
+    <link rel="icon" type="image/png" sizes="32x32" href="images/logo.png">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Manrope:wght@500;600;700;800&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+    <link rel="stylesheet" href="css/style.css">
+
+</head>
+
+<body class="auth-page register-page">
+
+    <main class="auth-wrapper">
+
+        <!--=========================================
+                LEFT IMAGE
+        ==========================================-->
+
+        <section class="auth-left">
+
+            <div class="auth-overlay"></div>
+
+            <div class="auth-left-content">
+
+                <span class="auth-badge">
+
+                    <i class="fa-solid fa-heart-circle-check"></i>
+
+                    Join CozyNest
+
+                </span>
+
+                <h1>
+
+                    Start Your Child's Learning Journey Today
+
+                </h1>
+
+                <p>
+
+                    Create your parent account to stay connected with your child's
+                    attendance, daily activities, meals, learning progress,
+                    and important announcements.
+
+                </p>
+
+                <div class="auth-feature-list">
+
+                    <div class="auth-feature-card">
+
+                        <div class="feature-icon">
+
+                            <i class="fa-solid fa-user-plus"></i>
+
+                        </div>
+
+                        <div>
+
+                            <h4>
+
+                                Quick Registration
+
+                            </h4>
+
+                            <p>
+
+                                Create your account in just a few simple steps.
+
+                            </p>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+        <!--=========================================
+                RIGHT FORM
+        ==========================================-->
+
+        <section class="auth-right">
+
+            <!--=========================================
+                    TOP ACTIONS
+            ==========================================-->
+
+            <div class="auth-top-actions">
+
+                <button class="icon-btn auth-toggle-btn" type="button" data-theme-toggle aria-label="Toggle dark mode">
+
+                    <i class="fa-solid fa-moon"></i>
+
+                </button>
+
+                <button class="icon-btn auth-toggle-btn" type="button" data-rtl-toggle aria-label="Toggle RTL">
+
+                    <i class="fa-solid fa-right-left"></i>
+
+                </button>
+
+            </div>
+
+            <!--=========================================
+                    REGISTER CARD
+            ==========================================-->
+
+            <div class="register-card">
+
+                <a href="index.html" class="auth-logo">
+
+                    <img src="images/logo.png" alt="CozyNest">
+
+                </a>
+
+                <div class="register-heading">
+
+                    <h2>
+
+                        Create Account
+
+                    </h2>
+
+                    <p>
+
+                        Register your parent account to access the CozyNest Parent Dashboard.
+
+                    </p>
+
+                </div>
+
+                <form class="register-form">
+
+                    <!-- Full Name -->
+
+                    <div class="register-group">
+
+                        <label>
+
+                            Full Name
+
+                        </label>
+
+                        <input class="register-input" type="text" placeholder="Enter your full name" required>
+
+                    </div>
+
+                    <!-- Email -->
+
+                    <div class="register-group">
+
+                        <label>
+
+                            Email Address
+
+                        </label>
+
+                        <input class="register-input" type="email" placeholder="Enter your email address" required>
+
+                    </div>
+
+                    <!-- Phone Number -->
+
+                    <div class="register-group">
+
+                        <label>
+
+                            Phone Number
+
+                        </label>
+
+                        <input class="register-input" type="tel" placeholder="Enter your phone number" required>
+
+                    </div>
+                    <!-- Password -->
+
+                    <div class="register-group">
+
+                        <label>
+
+                            Password
+
+                        </label>
+
+                        <div class="register-password-wrapper">
+
+                            <input class="register-input" type="password" id="registerPassword"
+                                placeholder="Enter your password" required>
+
+                            <button type="button" class="register-password-toggle"
+                                data-password-toggle="registerPassword">
+
+                                <i class="fa-regular fa-eye"></i>
+
+                            </button>
+
+                        </div>
+
+                    </div>
+
+                    <!-- Confirm Password -->
+
+                    <div class="register-group">
+
+                        <label>
+
+                            Confirm Password
+
+                        </label>
+
+                        <div class="register-password-wrapper">
+
+                            <input class="register-input" type="password" id="confirmPassword"
+                                placeholder="Confirm your password" required>
+
+                            <button type="button" class="register-password-toggle"
+                                data-password-toggle="confirmPassword">
+
+                                <i class="fa-regular fa-eye"></i>
+
+                            </button>
+
+                        </div>
+
+                    </div>
+
+                    <!-- Terms -->
+
+                    <div class="register-options">
+
+                        <label class="register-terms">
+
+                            <input type="checkbox" required>
+
+                            <span>
+
+                                I agree to the
+                                <a href="#">Terms & Conditions</a>
+                                and
+                                <a href="#">Privacy Policy</a>
+
+                            </span>
+
+                        </label>
+
+                    </div>
+
+                    <!-- Register Button -->
+
+                    <button type="submit" class="primary-btn register-btn">
+
+                        Create Account
+
+                    </button>
+
+                    <!-- Divider -->
+
+                    <div class="auth-divider">
+
+                        <span>
+
+                            OR CONTINUE WITH
+
+                        </span>
+
+                    </div>
+
+                    <!-- Social Login -->
+
+                    <div class="social-login">
+
+                        <button type="button" class="social-btn google-btn">
+
+                            <img src="images/google-logo.svg" alt="Google">
+
+                            <span>
+
+                                Google
+
+                            </span>
+
+                        </button>
+
+                        <button type="button" class="social-btn apple-btn">
+
+                            <i class="fa-brands fa-apple"></i>
+
+                            <span>
+
+                                Apple
+
+                            </span>
+
+                        </button>
+
+                        <button type="button" class="social-btn facebook-btn">
+
+                            <i class="fa-brands fa-facebook-f"></i>
+
+                            <span>
+
+                                Facebook
+
+                            </span>
+
+                        </button>
+
+                    </div>
+
+                    <!-- Footer -->
+
+                    <div class="auth-footer">
+
+                        <p>
+
+                            Already have an account?
+
+                            <a href="login.html">
+
+                                Sign In
+
+                            </a>
+
+                        </p>
+
+                    </div>
+
+                </form>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="js/auth.js"></script>
+
+</body>
+
+</html>

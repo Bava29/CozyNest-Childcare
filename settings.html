@@ -1,0 +1,903 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>CozyNest Childcare</title>
+
+    <meta name="description"
+        content="CozyNest Childcare provides safe, nurturing daycare and baby sitting services with a parent dashboard for live attendance, activity updates, meal logs, and fee payments.">
+
+    <meta name="keywords" content="Childcare, Crèche, Baby Sitting, Daycare, Parent Dashboard, Preschool, Toddler Care">
+
+    <meta name="author" content="CozyNest Childcare">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" sizes="32x32" href="images/logo.png">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Manrope:wght@500;600;700;800&display=swap"
+        rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+    <!-- AOS Animation -->
+    <link rel="stylesheet" href="https://unpkg.com/aos@2.3.4/dist/aos.css">
+
+    <!-- Swiper CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/dashboard.css">
+
+</head>
+
+<body>
+
+
+
+    <!--=========================================
+            DASHBOARD SIDEBAR
+==========================================-->
+
+    <aside class="dashboard-sidebar">
+
+        <!-- Logo -->
+
+        <div class="dashboard-logo">
+
+            <a href="index.html">
+
+                <img src="images/logo.png" alt="CozyNest">
+
+            </a>
+
+        </div>
+
+        <!-- Menu -->
+
+        <ul class="dashboard-menu">
+
+            <li>
+
+                <a href="dashboard.html">
+
+                    <i class="fa-solid fa-house"></i>
+
+                    <span>Dashboard</span>
+
+                </a>
+
+            </li>
+
+            <li>
+
+                <a href="my-child.html">
+
+                    <i class="fa-solid fa-child-reaching"></i>
+
+                    <span>My Child</span>
+
+                </a>
+
+            </li>
+
+            <li>
+
+                <a href="attendance.html">
+
+                    <i class="fa-solid fa-calendar-check"></i>
+
+                    <span>Attendance</span>
+
+                </a>
+
+            </li>
+
+            <li>
+
+                <a href="activities.html">
+
+                    <i class="fa-solid fa-palette"></i>
+
+                    <span>Daily Activities</span>
+
+                </a>
+
+            </li>
+
+            <li>
+
+                <a href="meals.html">
+
+                    <i class="fa-solid fa-utensils"></i>
+
+                    <span>Meal & Nutrition</span>
+
+                </a>
+
+            </li>
+
+            <li>
+
+                <a href="payments.html">
+
+                    <i class="fa-solid fa-credit-card"></i>
+
+                    <span>Fee Payments</span>
+
+                </a>
+
+            </li>
+
+            <li>
+
+                <a href="messages.html">
+
+                    <i class="fa-solid fa-comments"></i>
+
+                    <span>Messages</span>
+
+                </a>
+
+            </li>
+
+        </ul>
+
+        <!-- Sidebar Extras -->
+
+        <div class="dashboard-sidebar-extras">
+
+            <div class="dashboard-sidebar-top">
+
+                <div class="notification-dropdown">
+
+                    <button class="dashboard-icon-btn notification-btn">
+
+                        <i class="fa-regular fa-bell"></i>
+
+                        <span class="dashboard-badge">3</span>
+
+                    </button>
+
+                    <div class="notification-menu">
+
+                        <h5>Notifications</h5>
+
+                        <ul>
+
+                            <li>
+
+                                <i class="fa-solid fa-user-check"></i>
+
+                                <div>
+
+                                    <strong>Attendance Updated</strong>
+
+                                    <span>Emma checked in at 08:45 AM</span>
+
+                                </div>
+
+                            </li>
+
+                            <li>
+
+                                <i class="fa-solid fa-camera"></i>
+
+                                <div>
+
+                                    <strong>Activity Photos</strong>
+
+                                    <span>4 new photos uploaded</span>
+
+                                </div>
+
+                            </li>
+
+                            <li>
+
+                                <i class="fa-solid fa-utensils"></i>
+
+                                <div>
+
+                                    <strong>Lunch Completed</strong>
+
+                                    <span>Today's meal has been served.</span>
+
+                                </div>
+
+                            </li>
+
+                            <li>
+
+                                <i class="fa-solid fa-comments"></i>
+
+                                <div>
+
+                                    <strong>Teacher Message</strong>
+
+                                    <span>You have one unread message.</span>
+
+                                </div>
+
+                            </li>
+
+                        </ul>
+
+                        <a href="messages.html" class="view-all">
+
+                            View All Notifications
+
+                        </a>
+
+                    </div>
+
+                </div>
+
+                <a href="settings.html" class="dashboard-icon-btn">
+
+                    <i class="fa-solid fa-gear"></i>
+
+                </a>
+
+            </div>
+
+            <div class="dashboard-sidebar-profile">
+
+                <img src="images/parent.jpg" alt="Parent">
+
+                <div>
+
+                    <h6>Sophia Carter</h6>
+                    <span>Parent</span>
+
+                </div>
+
+            </div>
+
+            <div class="dashboard-sidebar-toggles">
+
+                <button class="icon-btn theme-toggle">
+
+                    <i class="fa-solid fa-moon"></i>
+
+                </button>
+
+                <button class="icon-btn rtl-toggle">
+
+                    <i class="fa-solid fa-right-left"></i>
+
+                </button>
+
+            </div>
+
+        </div>
+
+        <!-- Logout -->
+
+        <div class="dashboard-logout">
+
+            <button id="logoutBtn">
+
+                <i class="fa-solid fa-right-from-bracket"></i>
+
+                <span>Logout</span>
+
+            </button>
+
+        </div>
+
+    </aside>
+
+
+    <!--=========================================
+            DASHBOARD HEADER
+==========================================-->
+
+    <main class="dashboard-main">
+
+
+        <header class="dashboard-header">
+
+            <div class="dashboard-header-left">
+
+                <button class="dashboard-menu-toggle" id="dashboardMenuToggle">
+
+                    <i class="fa-solid fa-bars"></i>
+
+                </button>
+
+                <h1 class="dashboard-page-title">
+
+                    Profile Settings
+
+                </h1>
+
+            </div>
+
+            <div class="dashboard-header-right">
+
+                <!-- Notifications -->
+
+                <div class="notification-dropdown">
+
+                    <button class="dashboard-icon-btn notification-btn">
+
+                        <i class="fa-regular fa-bell"></i>
+
+                        <span class="dashboard-badge">3</span>
+
+                    </button>
+
+                    <div class="notification-menu">
+
+                        <h5>Notifications</h5>
+
+                        <ul>
+
+                            <li>
+
+                                <i class="fa-solid fa-user-check"></i>
+
+                                <div>
+
+                                    <strong>Attendance Updated</strong>
+
+                                    <span>Emma checked in at 08:45 AM</span>
+
+                                </div>
+
+                            </li>
+
+                            <li>
+
+                                <i class="fa-solid fa-camera"></i>
+
+                                <div>
+
+                                    <strong>Activity Photos</strong>
+
+                                    <span>4 new photos uploaded</span>
+
+                                </div>
+
+                            </li>
+
+                            <li>
+
+                                <i class="fa-solid fa-utensils"></i>
+
+                                <div>
+
+                                    <strong>Lunch Completed</strong>
+
+                                    <span>Today's meal has been served.</span>
+
+                                </div>
+
+                            </li>
+
+                            <li>
+
+                                <i class="fa-solid fa-comments"></i>
+
+                                <div>
+
+                                    <strong>Teacher Message</strong>
+
+                                    <span>You have one unread message.</span>
+
+                                </div>
+
+                            </li>
+
+                        </ul>
+
+                        <a href="messages.html" class="view-all">
+
+                            View All Notifications
+
+                        </a>
+
+                    </div>
+
+                </div>
+
+                <!-- Settings -->
+
+                <a href="settings.html" class="dashboard-icon-btn">
+
+                    <i class="fa-solid fa-gear"></i>
+
+                </a>
+
+
+                <button class="icon-btn theme-toggle">
+
+                    <i class="fa-solid fa-moon"></i>
+
+                </button>
+
+                <button class="icon-btn rtl-toggle">
+
+                    <i class="fa-solid fa-right-left"></i>
+
+                </button>
+
+
+                <!-- Parent Profile -->
+
+                <div class="dashboard-profile">
+
+                    <img src="images/parent.jpg" alt="Parent">
+
+                    <div>
+
+                        <h6>
+
+                            Sophia Carter
+
+                        </h6>
+
+                        <span>
+
+                            Parent
+
+                        </span>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </header>
+
+        <!--=========================================
+        ACCOUNT SETTINGS
+==========================================-->
+
+        <section class="account-settings">
+
+            <div class="container-fluid">
+
+                <div class="section-title mb-5">
+
+                    <span class="section-subtitle">
+
+                        Settings
+
+                    </span>
+
+                    <h2>
+
+                        Account Settings
+
+                    </h2>
+
+                    <p>
+
+                        Manage your personal information and account details.
+
+                    </p>
+
+                </div>
+
+                <div class="settings-card">
+
+                    <form>
+
+                        <div class="row g-4">
+
+                            <div class="col-md-6">
+
+                                <label>Full Name</label>
+
+                                <input type="text" class="form-control" value="Sophia Carter">
+
+                            </div>
+
+                            <div class="col-md-6">
+
+                                <label>Email Address</label>
+
+                                <input type="email" class="form-control" value="sophia@email.com">
+
+                            </div>
+
+                            <div class="col-md-6">
+
+                                <label>Phone Number</label>
+
+                                <input type="text" class="form-control" value="+91 98765 43210">
+
+                            </div>
+
+                            <div class="col-md-6">
+
+                                <label>Change Password</label>
+
+                                <input type="password" class="form-control" placeholder="••••••••">
+
+                            </div>
+
+                        </div>
+
+                        <button class="primary-btn mt-4">
+
+                            Save Changes
+
+                        </button>
+
+                    </form>
+
+                </div>
+
+            </div>
+
+        </section>
+
+        <!--=========================================
+        LINKED CHILD INFORMATION
+==========================================-->
+
+        <section class="linked-child">
+
+            <div class="container-fluid">
+
+                <div class="section-title mb-5">
+
+                    <span class="section-subtitle">
+
+                        Linked Child
+
+                    </span>
+
+                    <h2>
+
+                        Child Information
+
+                    </h2>
+
+                    <p>
+
+                        View your child's enrollment details, classroom information, and teacher assignment.
+
+                    </p>
+
+                </div>
+
+                <div class="linked-child-card">
+
+                    <div class="row align-items-center g-5">
+
+                        <div class="col-lg-4">
+
+                            <div class="linked-child-image">
+
+                                <img src="images/child.png" alt="Child">
+
+                            </div>
+
+                        </div>
+
+                        <div class="col-lg-8">
+
+                            <div class="row g-4">
+
+                                <div class="col-md-4">
+
+                                    <div class="child-info-box">
+
+                                        <span>Child Name</span>
+
+                                        <h5>Emma Carter</h5>
+
+                                    </div>
+
+                                </div>
+
+                                <div class="col-md-4">
+
+                                    <div class="child-info-box">
+
+                                        <span>Age</span>
+
+                                        <h5>4 Years</h5>
+
+                                    </div>
+
+                                </div>
+
+                                <div class="col-md-4">
+
+                                    <div class="child-info-box">
+
+                                        <span>Gender</span>
+
+                                        <h5>Female</h5>
+
+                                    </div>
+
+                                </div>
+
+                                <div class="col-md-4">
+
+                                    <div class="child-info-box">
+
+                                        <span>Classroom</span>
+
+                                        <h5>Butterfly</h5>
+
+                                    </div>
+
+                                </div>
+
+                                <div class="col-md-4">
+
+                                    <div class="child-info-box">
+
+                                        <span>Class Teacher</span>
+
+                                        <h5>Ms. Sophia</h5>
+
+                                    </div>
+
+                                </div>
+
+                                <div class="col-md-4">
+
+                                    <div class="child-info-box">
+
+                                        <span>Admission Date</span>
+
+                                        <h5>15 Jun 2025</h5>
+
+                                    </div>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!--=========================================
+        ACCOUNT SUMMARY
+==========================================-->
+
+        <section class="account-summary">
+
+            <div class="container-fluid">
+
+                <div class="section-title mb-5">
+
+                    <span class="section-subtitle">
+
+                        Account Summary
+
+                    </span>
+
+                    <h2>
+
+                        Parent Dashboard Overview
+
+                    </h2>
+
+                    <p>
+
+                        View a quick summary of your account, child's progress, and recent activity.
+
+                    </p>
+
+                </div>
+
+                <div class="row g-4">
+
+                    <!-- Attendance -->
+
+                    <div class="col-xl-3 col-md-6">
+
+                        <div class="summary-info-card">
+
+                            <i class="fa-solid fa-calendar-check"></i>
+
+                            <h3>96%</h3>
+
+                            <span>Attendance</span>
+
+                        </div>
+
+                    </div>
+
+                    <!-- Messages -->
+
+                    <div class="col-xl-3 col-md-6">
+
+                        <div class="summary-info-card">
+
+                            <i class="fa-solid fa-comments"></i>
+
+                            <h3>08</h3>
+
+                            <span>Unread Messages</span>
+
+                        </div>
+
+                    </div>
+
+                    <!-- Fee Status -->
+
+                    <div class="col-xl-3 col-md-6">
+
+                        <div class="summary-info-card">
+
+                            <i class="fa-solid fa-wallet"></i>
+
+                            <h3>Paid</h3>
+
+                            <span>Fee Status</span>
+
+                        </div>
+
+                    </div>
+
+                    <!-- Activities -->
+
+                    <div class="col-xl-3 col-md-6">
+
+                        <div class="summary-info-card">
+
+                            <i class="fa-solid fa-star"></i>
+
+                            <h3>24</h3>
+
+                            <span>Activities Completed</span>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <!-- Bottom Card -->
+
+                <div class="account-status-card">
+
+                    <div class="row g-4">
+
+                        <div class="col-lg-4">
+
+                            <div class="status-box">
+
+                                <h5>Account Status</h5>
+
+                                <span class="status-active">
+
+                                    Active
+
+                                </span>
+
+                            </div>
+
+                        </div>
+
+                        <div class="col-lg-4">
+
+                            <div class="status-box">
+
+                                <h5>Last Login</h5>
+
+                                <p>08 July 2026 • 09:30 AM</p>
+
+                            </div>
+
+                        </div>
+
+                        <div class="col-lg-4">
+
+                            <div class="status-box">
+
+                                <h5>Member Since</h5>
+
+                                <p>June 2025</p>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+    <!--=========================================
+        LOGOUT MODAL
+==========================================-->
+
+    <div class="logout-modal" id="logoutModal">
+
+        <div class="logout-modal-content">
+
+            <div class="logout-icon">
+
+                <i class="fa-solid fa-right-from-bracket"></i>
+
+            </div>
+
+            <h3>
+
+                Logout
+
+            </h3>
+
+            <p>
+
+                Are you sure you want to logout from your account?
+
+            </p>
+
+            <div class="logout-buttons">
+
+                <button class="logout-cancel" id="cancelLogout">
+
+                    No
+
+                </button>
+
+                <button class="logout-confirm" id="confirmLogout">
+
+                    Yes
+
+                </button>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- AOS JS -->
+    <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+
+    <!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+    <!-- Custom JS -->
+    <script src="js/main.js"></script>
+
+
+
+</body>
+
+</html>

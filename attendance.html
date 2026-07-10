@@ -1,0 +1,962 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>CozyNest Childcare</title>
+
+    <meta name="description"
+        content="CozyNest Childcare provides safe, nurturing daycare and baby sitting services with a parent dashboard for live attendance, activity updates, meal logs, and fee payments.">
+
+    <meta name="keywords" content="Childcare, Crèche, Baby Sitting, Daycare, Parent Dashboard, Preschool, Toddler Care">
+
+    <meta name="author" content="CozyNest Childcare">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" sizes="32x32" href="images/logo.png">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Manrope:wght@500;600;700;800&display=swap"
+        rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+
+    <!-- AOS Animation -->
+    <link rel="stylesheet" href="https://unpkg.com/aos@2.3.4/dist/aos.css">
+
+    <!-- Swiper CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/dashboard.css">
+
+</head>
+
+<body>
+
+
+
+    <!--=========================================
+            DASHBOARD SIDEBAR
+==========================================-->
+
+    <aside class="dashboard-sidebar">
+
+        <!-- Logo -->
+
+        <div class="dashboard-logo">
+
+            <a href="index.html">
+
+                <img src="images/logo.png" alt="CozyNest">
+
+            </a>
+
+        </div>
+
+        <!-- Menu -->
+
+        <ul class="dashboard-menu">
+
+            <li>
+
+                <a href="dashboard.html">
+
+                    <i class="fa-solid fa-house"></i>
+
+                    <span>Dashboard</span>
+
+                </a>
+
+            </li>
+
+            <li>
+
+                <a href="my-child.html">
+
+                    <i class="fa-solid fa-child-reaching"></i>
+
+                    <span>My Child</span>
+
+                </a>
+
+            </li>
+
+            <li>
+
+                <a href="attendance.html" class="active">
+
+                    <i class="fa-solid fa-calendar-check"></i>
+
+                    <span>Attendance</span>
+
+                </a>
+
+            </li>
+
+            <li>
+
+                <a href="activities.html">
+
+                    <i class="fa-solid fa-palette"></i>
+
+                    <span>Daily Activities</span>
+
+                </a>
+
+            </li>
+
+            <li>
+
+                <a href="meals.html">
+
+                    <i class="fa-solid fa-utensils"></i>
+
+                    <span>Meal & Nutrition</span>
+
+                </a>
+
+            </li>
+
+            <li>
+
+                <a href="payments.html">
+
+                    <i class="fa-solid fa-credit-card"></i>
+
+                    <span>Fee Payments</span>
+
+                </a>
+
+            </li>
+
+            <li>
+
+                <a href="messages.html">
+
+                    <i class="fa-solid fa-comments"></i>
+
+                    <span>Messages</span>
+
+                </a>
+
+            </li>
+
+        </ul>
+
+
+        <!-- Sidebar Extras -->
+
+        <div class="dashboard-sidebar-extras">
+
+            <div class="dashboard-sidebar-top">
+
+                <div class="notification-dropdown">
+
+                    <button class="dashboard-icon-btn notification-btn">
+
+                        <i class="fa-regular fa-bell"></i>
+
+                        <span class="dashboard-badge">3</span>
+
+                    </button>
+
+                    <div class="notification-menu">
+
+                        <h5>Notifications</h5>
+
+                        <ul>
+
+                            <li>
+
+                                <i class="fa-solid fa-user-check"></i>
+
+                                <div>
+
+                                    <strong>Attendance Updated</strong>
+
+                                    <span>Emma checked in at 08:45 AM</span>
+
+                                </div>
+
+                            </li>
+
+                            <li>
+
+                                <i class="fa-solid fa-camera"></i>
+
+                                <div>
+
+                                    <strong>Activity Photos</strong>
+
+                                    <span>4 new photos uploaded</span>
+
+                                </div>
+
+                            </li>
+
+                            <li>
+
+                                <i class="fa-solid fa-utensils"></i>
+
+                                <div>
+
+                                    <strong>Lunch Completed</strong>
+
+                                    <span>Today's meal has been served.</span>
+
+                                </div>
+
+                            </li>
+
+                            <li>
+
+                                <i class="fa-solid fa-comments"></i>
+
+                                <div>
+
+                                    <strong>Teacher Message</strong>
+
+                                    <span>You have one unread message.</span>
+
+                                </div>
+
+                            </li>
+
+                        </ul>
+
+                        <a href="messages.html" class="view-all">
+
+                            View All Notifications
+
+                        </a>
+
+                    </div>
+
+                </div>
+
+                <a href="settings.html" class="dashboard-icon-btn">
+
+                    <i class="fa-solid fa-gear"></i>
+
+                </a>
+
+            </div>
+
+            <div class="dashboard-sidebar-profile">
+
+                <img src="images/parent.jpg" alt="Parent">
+
+                <div>
+
+                    <h6>Sophia Carter</h6>
+                    <span>Parent</span>
+
+                </div>
+
+            </div>
+
+            <div class="dashboard-sidebar-toggles">
+
+                <button class="icon-btn theme-toggle">
+
+                    <i class="fa-solid fa-moon"></i>
+
+                </button>
+
+                <button class="icon-btn rtl-toggle">
+
+                    <i class="fa-solid fa-right-left"></i>
+
+                </button>
+
+            </div>
+
+        </div>
+
+        <!-- Logout -->
+
+        <div class="dashboard-logout">
+
+            <button id="logoutBtn">
+
+                <i class="fa-solid fa-right-from-bracket"></i>
+
+                <span>Logout</span>
+
+            </button>
+
+        </div>
+
+    </aside>
+
+
+    <!--=========================================
+            DASHBOARD HEADER
+==========================================-->
+
+    <main class="dashboard-main">
+
+
+        <header class="dashboard-header">
+
+            <div class="dashboard-header-left">
+
+                <button class="dashboard-menu-toggle" id="dashboardMenuToggle">
+
+                    <i class="fa-solid fa-bars"></i>
+
+                </button>
+
+                <h1 class="dashboard-page-title">
+
+                    Attendance
+
+                </h1>
+
+            </div>
+
+            <div class="dashboard-header-right">
+
+                <!-- Notifications -->
+
+                <div class="notification-dropdown">
+
+                    <button class="dashboard-icon-btn notification-btn">
+
+                        <i class="fa-regular fa-bell"></i>
+
+                        <span class="dashboard-badge">3</span>
+
+                    </button>
+
+                    <div class="notification-menu">
+
+                        <h5>Notifications</h5>
+
+                        <ul>
+
+                            <li>
+
+                                <i class="fa-solid fa-user-check"></i>
+
+                                <div>
+
+                                    <strong>Attendance Updated</strong>
+
+                                    <span>Emma checked in at 08:45 AM</span>
+
+                                </div>
+
+                            </li>
+
+                            <li>
+
+                                <i class="fa-solid fa-camera"></i>
+
+                                <div>
+
+                                    <strong>Activity Photos</strong>
+
+                                    <span>4 new photos uploaded</span>
+
+                                </div>
+
+                            </li>
+
+                            <li>
+
+                                <i class="fa-solid fa-utensils"></i>
+
+                                <div>
+
+                                    <strong>Lunch Completed</strong>
+
+                                    <span>Today's meal has been served.</span>
+
+                                </div>
+
+                            </li>
+
+                            <li>
+
+                                <i class="fa-solid fa-comments"></i>
+
+                                <div>
+
+                                    <strong>Teacher Message</strong>
+
+                                    <span>You have one unread message.</span>
+
+                                </div>
+
+                            </li>
+
+                        </ul>
+
+                        <a href="messages.html" class="view-all">
+
+                            View All Notifications
+
+                        </a>
+
+                    </div>
+
+                </div>
+
+                <!-- Settings -->
+
+                <a href="settings.html" class="dashboard-icon-btn">
+
+                    <i class="fa-solid fa-gear"></i>
+
+                </a>
+
+                <!-- Dark Mode -->
+
+                <button class="icon-btn theme-toggle">
+
+                    <i class="fa-solid fa-moon"></i>
+
+                </button>
+
+                <button class="icon-btn rtl-toggle">
+
+                    <i class="fa-solid fa-right-left"></i>
+
+                </button>
+
+                <!-- Parent Profile -->
+
+                <div class="dashboard-profile">
+
+                    <img src="images/parent.jpg" alt="Parent">
+
+                    <div>
+
+                        <h6>
+
+                            Sophia Carter
+
+                        </h6>
+
+                        <span>
+
+                            Parent
+
+                        </span>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </header>
+
+
+        <!--=========================================
+        ATTENDANCE OVERVIEW
+==========================================-->
+
+        <section class="attendance-overview">
+
+            <div class="container-fluid">
+
+                <div class="section-title mb-5">
+
+                    <span class="section-subtitle">
+
+                        Attendance Overview
+
+                    </span>
+
+                    <h2>
+
+                        Track Your Child's Attendance
+
+                    </h2>
+
+                    <p>
+
+                        View attendance records, punctuality, and overall attendance percentage.
+
+                    </p>
+
+                </div>
+
+                <div class="row g-4">
+
+                    <!-- Present -->
+
+                    <div class="col-xl-3 col-md-6">
+
+                        <div class="attendance-card">
+
+                            <div class="attendance-icon">
+
+                                <i class="fa-solid fa-circle-check"></i>
+
+                            </div>
+
+                            <span>Present</span>
+
+                            <h3>22</h3>
+
+                            <p>Days This Month</p>
+
+                        </div>
+
+                    </div>
+
+                    <!-- Absent -->
+
+                    <div class="col-xl-3 col-md-6">
+
+                        <div class="attendance-card">
+
+                            <div class="attendance-icon absent">
+
+                                <i class="fa-solid fa-circle-xmark"></i>
+
+                            </div>
+
+                            <span>Absent</span>
+
+                            <h3>2</h3>
+
+                            <p>Days This Month</p>
+
+                        </div>
+
+                    </div>
+
+                    <!-- Late -->
+
+                    <div class="col-xl-3 col-md-6">
+
+                        <div class="attendance-card">
+
+                            <div class="attendance-icon late">
+
+                                <i class="fa-solid fa-clock"></i>
+
+                            </div>
+
+                            <span>Late Check-ins</span>
+
+                            <h3>1</h3>
+
+                            <p>Recorded This Month</p>
+
+                        </div>
+
+                    </div>
+
+                    <!-- Percentage -->
+
+                    <div class="col-xl-3 col-md-6">
+
+                        <div class="attendance-card">
+
+                            <div class="attendance-icon">
+
+                                <i class="fa-solid fa-chart-pie"></i>
+
+                            </div>
+
+                            <span>Attendance</span>
+
+                            <h3>92%</h3>
+
+                            <p>Overall Attendance</p>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!--=========================================
+        MONTHLY ATTENDANCE
+==========================================-->
+
+        <section class="attendance-calendar-section">
+
+            <div class="container-fluid">
+
+                <div class="attendance-calendar-card">
+
+                    <div class="attendance-calendar-header">
+
+                        <div>
+
+                            <h3>Monthly Attendance</h3>
+
+                            <p>July 2026 Attendance Overview</p>
+
+                        </div>
+
+                        <button class="primary-btn">
+
+                            Download Report
+
+                        </button>
+
+                    </div>
+
+                    <div class="calendar-grid">
+
+                        <div class="day-name">Sun</div>
+                        <div class="day-name">Mon</div>
+                        <div class="day-name">Tue</div>
+                        <div class="day-name">Wed</div>
+                        <div class="day-name">Thu</div>
+                        <div class="day-name">Fri</div>
+                        <div class="day-name">Sat</div>
+
+                        <div class="calendar-day empty"></div>
+                        <div class="calendar-day empty"></div>
+
+                        <div class="calendar-day present">1</div>
+                        <div class="calendar-day present">2</div>
+                        <div class="calendar-day present">3</div>
+                        <div class="calendar-day holiday">4</div>
+                        <div class="calendar-day holiday">5</div>
+
+                        <div class="calendar-day present">6</div>
+                        <div class="calendar-day present">7</div>
+                        <div class="calendar-day absent">8</div>
+                        <div class="calendar-day present">9</div>
+                        <div class="calendar-day present">10</div>
+                        <div class="calendar-day holiday">11</div>
+                        <div class="calendar-day holiday">12</div>
+
+                        <div class="calendar-day present">13</div>
+                        <div class="calendar-day present">14</div>
+                        <div class="calendar-day present">15</div>
+                        <div class="calendar-day late">16</div>
+                        <div class="calendar-day present">17</div>
+                        <div class="calendar-day holiday">18</div>
+                        <div class="calendar-day holiday">19</div>
+
+                        <div class="calendar-day present">20</div>
+                        <div class="calendar-day present">21</div>
+                        <div class="calendar-day present">22</div>
+                        <div class="calendar-day present">23</div>
+                        <div class="calendar-day present">24</div>
+                        <div class="calendar-day holiday">25</div>
+                        <div class="calendar-day holiday">26</div>
+
+                        <div class="calendar-day present">27</div>
+                        <div class="calendar-day present">28</div>
+                        <div class="calendar-day present">29</div>
+                        <div class="calendar-day present">30</div>
+                        <div class="calendar-day present">31</div>
+
+                    </div>
+
+                    <div class="attendance-legend">
+
+                        <span><i class="legend present-box"></i> Present</span>
+
+                        <span><i class="legend absent-box"></i> Absent</span>
+
+                        <span><i class="legend late-box"></i> Late</span>
+
+                        <span><i class="legend holiday-box"></i> Holiday</span>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+        <!--=========================================
+        ATTENDANCE HISTORY
+==========================================-->
+
+        <section class="attendance-history">
+
+            <div class="container-fluid">
+
+                <div class="section-title mb-5">
+
+                    <span class="section-subtitle">
+
+                        Attendance History
+
+                    </span>
+
+                    <h2>
+
+                        Check-in & Check-out Records
+
+                    </h2>
+
+                    <p>
+
+                        View your child's recent attendance records with check-in and check-out times.
+
+                    </p>
+
+                </div>
+
+                <div class="history-card">
+
+                    <!-- Item -->
+
+                    <div class="history-item">
+
+                        <div class="history-date">
+
+                            <h4>07</h4>
+
+                            <span>Jul</span>
+
+                        </div>
+
+                        <div class="history-details">
+
+                            <h5>Monday</h5>
+
+                            <p>Checked in at <strong>08:45 AM</strong></p>
+
+                        </div>
+
+                        <div class="history-time">
+
+                            <span class="check-in">
+
+                                <i class="fa-solid fa-right-to-bracket"></i>
+
+                                08:45 AM
+
+                            </span>
+
+                            <span class="check-out">
+
+                                <i class="fa-solid fa-right-from-bracket"></i>
+
+                                04:30 PM
+
+                            </span>
+
+                        </div>
+
+                        <span class="history-status present">
+
+                            Present
+
+                        </span>
+
+                    </div>
+
+                    <!-- Item -->
+
+                    <div class="history-item">
+
+                        <div class="history-date">
+
+                            <h4>06</h4>
+
+                            <span>Jul</span>
+
+                        </div>
+
+                        <div class="history-details">
+
+                            <h5>Sunday</h5>
+
+                            <p>Weekend Holiday</p>
+
+                        </div>
+
+                        <div class="history-time">
+
+                            <span>Holiday</span>
+
+                        </div>
+
+                        <span class="history-status holiday">
+
+                            Holiday
+
+                        </span>
+
+                    </div>
+
+                    <!-- Item -->
+
+                    <div class="history-item">
+
+                        <div class="history-date">
+
+                            <h4>05</h4>
+
+                            <span>Jul</span>
+
+                        </div>
+
+                        <div class="history-details">
+
+                            <h5>Saturday</h5>
+
+                            <p>Checked in at <strong>09:05 AM</strong></p>
+
+                        </div>
+
+                        <div class="history-time">
+
+                            <span class="check-in">
+
+                                <i class="fa-solid fa-right-to-bracket"></i>
+
+                                09:05 AM
+
+                            </span>
+
+                            <span class="check-out">
+
+                                <i class="fa-solid fa-right-from-bracket"></i>
+
+                                04:20 PM
+
+                            </span>
+
+                        </div>
+
+                        <span class="history-status late">
+
+                            Late
+
+                        </span>
+
+                    </div>
+
+                    <!-- Item -->
+
+                    <div class="history-item">
+
+                        <div class="history-date">
+
+                            <h4>04</h4>
+
+                            <span>Jul</span>
+
+                        </div>
+
+                        <div class="history-details">
+
+                            <h5>Friday</h5>
+
+                            <p>Child was absent.</p>
+
+                        </div>
+
+                        <div class="history-time">
+
+                            <span>No Record</span>
+
+                        </div>
+
+                        <span class="history-status absent">
+
+                            Absent
+
+                        </span>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+    <!--=========================================
+        LOGOUT MODAL
+==========================================-->
+
+    <div class="logout-modal" id="logoutModal">
+
+        <div class="logout-modal-content">
+
+            <div class="logout-icon">
+
+                <i class="fa-solid fa-right-from-bracket"></i>
+
+            </div>
+
+            <h3>
+
+                Logout
+
+            </h3>
+
+            <p>
+
+                Are you sure you want to logout from your account?
+
+            </p>
+
+            <div class="logout-buttons">
+
+                <button class="logout-cancel" id="cancelLogout">
+
+                    No
+
+                </button>
+
+                <button class="logout-confirm" id="confirmLogout">
+
+                    Yes
+
+                </button>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- AOS JS -->
+    <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+
+    <!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+    <!-- Custom JS -->
+    <script src="js/main.js"></script>
+
+
+
+</body>
+
+</html>
