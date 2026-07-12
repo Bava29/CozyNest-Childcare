@@ -17778,3 +17778,25 @@ body.dark-mode .header-actions .icon-btn:hover {
 .enroll-form-section {
     padding-top: 160px;
 }
+
+/*=========================================
+        CONTACT BUTTON HOVER FIX
+=========================================*/
+
+.contact-form .primary-btn,
+.contact-form button[type="submit"] {
+    border: 2px solid var(--primary) !important;
+    transition: all .35s ease !important;
+}
+
+.contact-form .primary-btn:hover,
+.contact-form .primary-btn:focus,
+.contact-form .primary-btn:active,
+.contact-form button[type="submit"]:hover,
+.contact-form button[type="submit"]:focus,
+.contact-form button[type="submit"]:active {
+
+    background: transparent !important;
+    color: var(--primary) !important;
+    border: 2px solid var(--primary) !important;
+}
