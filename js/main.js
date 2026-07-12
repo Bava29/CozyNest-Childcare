@@ -528,27 +528,3 @@ if (logoutBtn && logoutModal && cancelLogout && confirmLogout) {
 
 }
 
-/*=========================================
-    NOTIFICATION DROPDOWN
-=========================================*/
-
-const notificationBtn = document.querySelector(".notification-btn");
-const notificationMenu = document.querySelector(".notification-menu");
-
-if (notificationBtn && notificationMenu) {
-
-    notificationBtn.addEventListener("click", function (e) {
-
-        e.stopPropagation();
-
-        notificationMenu.classList.toggle("show");
-
-    });
-
-    document.addEventListener("click", function () {
-
-        notificationMenu.classList.remove("show");
-
-    });
-
-}
