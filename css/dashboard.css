@@ -255,29 +255,6 @@ body.dashboard-sidebar-open {
         DASHBOARD HEADER
 =========================================*/
 
-.dashboard-header {
-
-    height: 85px;
-
-    background: #fff;
-
-    display: flex;
-
-    justify-content: space-between;
-
-    align-items: center;
-
-    padding: 0 35px;
-
-    border-bottom: 1px solid #E8F3F1;
-
-    position: sticky;
-
-    top: 0;
-
-    z-index: 999;
-
-}
 
 .dashboard-header-left {
 
@@ -428,6 +405,7 @@ body.dashboard-sidebar-open {
 }
 
 
+
 /*************************************************************Dashboard Page*************************************************************/
 
 /*=========================================
@@ -443,6 +421,8 @@ body.dashboard-sidebar-open {
     min-height: 100vh;
 
     background: #F8FFFE;
+
+    padding-top: 120px;
 
 }
 
@@ -467,6 +447,12 @@ body.dashboard-sidebar-open {
     align-items: center;
 
     border-bottom: 1px solid #E8F3F1;
+
+    position: fixed;
+
+    top: 0;
+
+    z-index: 999;
 
 }
 
@@ -998,6 +984,26 @@ body.dashboard-sidebar-open {
 
     color: var(--primary);
 
+}
+
+/*=========================================
+        DASHBOARD PAGE HEADER
+=========================================*/
+
+.dashboard-header {
+    padding: 55px 50px;
+}
+
+.dashboard-header h1 {
+    margin-bottom: 12px;
+    font-size: 32px;
+    line-height: 1.2;
+}
+
+.dashboard-header p {
+    margin: 0;
+    font-size: 16px;
+    line-height: 1.7;
 }
 
 /*=========================================
@@ -1809,6 +1815,22 @@ body.dark-mode .dashboard-welcome .primary-btn:hover {
     gap: 8px;
 
     min-width: 170px;
+
+    align-items: flex-end;
+
+    text-align: right;
+
+}
+
+.history-time span {
+
+    display: inline-flex;
+
+    align-items: center;
+
+    justify-content: flex-end;
+
+    gap: 8px;
 
 }
 
@@ -7650,6 +7672,72 @@ body.rtl .logout-buttons {
         border-radius: 50%;
         background: #fff;
         cursor: pointer;
+    }
+
+}
+
+/*=========================================
+        STRONG MOBILE LAYOUT FIX
+=========================================*/
+
+@media (max-width:767px) {
+
+    html,
+    body {
+        width: 100%;
+        max-width: 100%;
+        overflow-x: hidden !important;
+    }
+
+    body {
+        margin: 0 !important;
+        padding: 0 !important;
+    }
+
+    .dashboard-wrapper,
+    .dashboard-main,
+    .dashboard-content {
+        width: 100% !important;
+        max-width: 100% !important;
+        overflow-x: hidden !important;
+        margin: 0 !important;
+        padding: 0 !important;
+    }
+
+    section,
+    .dashboard-section,
+    .dashboard-card,
+    .attendance-card,
+    .attendance-calendar-card,
+    .attendance-summary,
+    .attendance-history,
+    .attendance-overview {
+        width: 100% !important;
+        max-width: 100% !important;
+        margin-left: auto !important;
+        margin-right: auto !important;
+        box-sizing: border-box;
+    }
+
+    .global-container,
+    .container,
+    .container-fluid {
+        width: 100% !important;
+        max-width: 100% !important;
+        padding-left: 15px !important;
+        padding-right: 15px !important;
+    }
+
+    img,
+    table,
+    canvas,
+    svg {
+        max-width: 100% !important;
+        height: auto;
+    }
+
+    * {
+        box-sizing: border-box;
     }
 
 }

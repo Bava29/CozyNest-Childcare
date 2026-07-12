@@ -397,6 +397,22 @@ body {
 
 }
 
+body.dark-mode .main-header .nav-link,
+body.dark-mode .main-header.scrolled .nav-link {
+
+    color: #F8FAFC !important;
+
+}
+
+body.dark-mode .main-header .nav-link:hover,
+body.dark-mode .main-header .nav-link.active,
+body.dark-mode .main-header.scrolled .nav-link:hover,
+body.dark-mode .main-header.scrolled .nav-link.active {
+
+    color: var(--primary) !important;
+
+}
+
 /*=========================================
             DROPDOWN
 =========================================*/
@@ -612,13 +628,21 @@ body {
 
 }
 
-.footer h4 {
+.footer .row.gy-5 {
 
-    color: #fff;
+    align-items: flex-start;
 
-    margin-bottom: 25px;
+    gap: 28px;
 
-    font-size: 22px;
+}
+
+.footer .row.gy-5>div {
+
+    flex: 1 1 280px;
+
+    min-width: 240px;
+
+    align-self: stretch;
 
 }
 
@@ -3300,115 +3324,259 @@ body {
 }
 
 /*=========================================
-        HOME 2 TESTIMONIALS
+        PARENT VOICES
 =========================================*/
 
-.home2-testimonials {
-
+.parent-voices {
     padding: 120px 0;
-
     background: #F8FFFE;
-
+    overflow: hidden;
 }
 
-.home2-testimonials .section-title {
-
-    max-width: 700px;
-
-    margin: 0 auto 70px;
-
+.voices-heading {
     text-align: center;
-
+    max-width: 700px;
+    margin: 0 auto 60px;
 }
 
-.testimonial-card {
-
-    background: #fff;
-
-    border-radius: 24px;
-
-    padding: 35px;
-
-    border: 1px solid #E8F3F1;
-
-    box-shadow: 0 15px 40px rgba(0, 0, 0, .05);
-
-    height: 100%;
-
-    transition: .35s;
-
-}
-
-.testimonial-card:hover {
-
-    transform: translateY(-10px);
-
-    border-color: var(--primary);
-
-}
-
-.testimonial-stars {
-
-    color: #FBBF24;
-
-    margin-bottom: 20px;
-
-    display: flex;
-
-    gap: 5px;
-
-}
-
-.testimonial-card p {
-
-    line-height: 1.9;
-
-    margin-bottom: 30px;
-
-    color: var(--text);
-
-}
-
-.testimonial-author {
-
-    display: flex;
-
+.voices-tag {
+    display: inline-flex;
     align-items: center;
-
-    gap: 15px;
-
+    justify-content: center;
+    padding: 10px 22px;
+    border-radius: 50px;
+    background: rgba(20, 184, 166, .12);
+    color: var(--primary);
+    font-size: 15px;
+    font-weight: 700;
+    margin-bottom: 20px;
 }
 
-.testimonial-author img {
-
-    width: 70px;
-
-    height: 70px;
-
-    border-radius: 50%;
-
-    object-fit: cover;
-
+.voices-heading h2 {
+    font-size: 48px;
+    line-height: 1.2;
+    margin-bottom: 18px;
 }
 
-.testimonial-author h5 {
-
-    margin-bottom: 5px;
-
-}
-
-.testimonial-author span {
-
+.voices-heading p {
+    max-width: 620px;
+    margin: 0 auto;
+    line-height: 1.9;
     color: var(--text);
+}
+
+.voices-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+}
+
+.voice-card {
+    position: relative;
+    background: #ffffff;
+    border: 1px solid #E7F2EF;
+    border-radius: 30px;
+    padding: 40px 35px;
+    transition: .35s ease;
+    overflow: hidden;
+    box-shadow: 0 18px 45px rgba(0, 0, 0, .05);
+}
+
+.voice-card:hover {
+    transform: translateY(-10px);
+    border-color: var(--primary);
+    box-shadow: 0 25px 55px rgba(20, 184, 166, .18);
+}
+
+.voice-quote {
+    position: absolute;
+    top: 30px;
+    right: 30px;
+    width: 58px;
+    height: 58px;
+    border-radius: 18px;
+    background: rgba(20, 184, 166, .10);
+    color: var(--primary);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 22px;
+}
+
+.voice-stars {
+    display: flex;
+    gap: 5px;
+    color: #FBBF24;
+    margin-bottom: 25px;
+    font-size: 18px;
+}
+
+.voice-message {
+    margin: 0;
+    padding-right: 45px;
+    color: var(--text);
+    line-height: 1.9;
+    font-size: 16px;
+}
+
+.voice-profile {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+    margin-top: 35px;
+    padding-top: 25px;
+    border-top: 1px solid #EEF5F3;
+}
+
+.voice-avatar {
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 4px solid rgba(20, 184, 166, .12);
+}
+
+.voice-name {
+    margin: 0 0 5px;
+    font-size: 20px;
+}
+
+.voice-role {
+    color: var(--text);
+    font-size: 15px;
+}
+
+/*=========================================
+        DARK MODE
+=========================================*/
+
+body.dark-mode .parent-voices {
+    background: #0F172A;
+}
+
+body.dark-mode .voices-heading h2 {
+    color: #F8FAFC;
+}
+
+body.dark-mode .voices-heading p {
+    color: #CBD5E1;
+}
+
+body.dark-mode .voices-tag {
+    background: rgba(20, 184, 166, .18);
+}
+
+body.dark-mode .voice-card {
+    background: #1E293B;
+    border-color: #334155;
+    box-shadow: none;
+}
+
+body.dark-mode .voice-card:hover {
+    border-color: var(--primary);
+    box-shadow: 0 20px 45px rgba(0, 0, 0, .35);
+}
+
+body.dark-mode .voice-message,
+body.dark-mode .voice-role {
+    color: #CBD5E1;
+}
+
+body.dark-mode .voice-name {
+    color: #F8FAFC;
+}
+
+body.dark-mode .voice-profile {
+    border-color: #334155;
+}
+
+body.dark-mode .voice-quote {
+    background: rgba(20, 184, 166, .18);
+}
+
+/*=========================================
+        RESPONSIVE
+=========================================*/
+
+@media(max-width:1199px) {
+
+    .voices-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+}
+
+/*=========================================
+        TESTIMONIAL TABLET FIX
+=========================================*/
+
+@media (min-width:768px) and (max-width:1199px) {
+
+    .voices-grid {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 30px;
+    }
+
+    .voices-grid .voice-card:last-child {
+        grid-column: 1 / -1;
+        max-width: 420px;
+        width: 100%;
+        margin: 0 auto;
+    }
+
+}
+
+@media(max-width:991px) {
+
+    .parent-voices {
+        padding: 90px 0;
+    }
+
+    .voices-heading {
+        margin-bottom: 50px;
+    }
+
+    .voices-heading h2 {
+        font-size: 40px;
+    }
+
+    .voice-card {
+        padding: 35px 30px;
+    }
 
 }
 
 @media(max-width:767px) {
 
-    .home2-testimonials {
+    .parent-voices {
+        padding: 70px 0;
+    }
 
-        padding: 80px 0;
+    .voices-grid {
+        grid-template-columns: 1fr;
+        gap: 25px;
+    }
 
+    .voices-heading h2 {
+        font-size: 32px;
+    }
+
+    .voice-card {
+        padding: 30px 25px;
+    }
+
+    .voice-profile {
+        gap: 15px;
+    }
+
+    .voice-avatar {
+        width: 60px;
+        height: 60px;
+    }
+
+    .voice-name {
+        font-size: 18px;
     }
 
 }
@@ -3531,6 +3699,14 @@ body {
 
     line-height: 1.8;
 
+}
+
+/*=========================================
+        FAQ ARROW - DARK MODE
+=========================================*/
+
+body.dark-mode .accordion-button::after {
+    filter: brightness(0) invert(1);
 }
 
 /*=========================================
@@ -3729,6 +3905,26 @@ body {
 
         width: 100%;
 
+    }
+
+}
+
+/*=========================================
+        LEARNING SPACES TABLET
+=========================================*/
+
+@media (min-width:768px) and (max-width:1199px) {
+
+    .spaces-gallery {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+    }
+
+    .space-large {
+        display: block;
+        margin: 0 auto;
     }
 
 }
@@ -5783,6 +5979,28 @@ body {
 
 }
 
+.contact-hero {
+
+    position: relative;
+
+    height: 520px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    background: url("../images/contact-banner.jpg") center center/cover no-repeat;
+
+    overflow: hidden;
+
+    padding-top: 120px;
+
+    padding-bottom: 40px;
+
+}
+
 .contact-hero-content {
 
     position: relative;
@@ -6743,6 +6961,28 @@ body {
 
 }
 
+.auth-top-actions {
+
+    position: absolute;
+
+    top: 35px;
+
+    right: 35px;
+
+    display: flex;
+
+    gap: 14px;
+
+}
+
+.auth-top-actions .icon-btn {
+
+    width: 46px;
+
+    height: 46px;
+
+}
+
 
 /*=========================================
             LEFT IMAGE SECTION
@@ -6949,7 +7189,9 @@ body {
 
 .auth-logo {
 
-    display: inline-block;
+    display: flex;
+
+    justify-content: center;
 
     margin-bottom: 25px;
 
@@ -6964,6 +7206,8 @@ body {
 .auth-heading {
 
     margin-bottom: 35px;
+
+    text-align: center;
 
 }
 
@@ -7765,6 +8009,8 @@ body {
 .register-heading {
 
     margin-bottom: 35px;
+
+    text-align: center;
 
 }
 
@@ -10353,6 +10599,28 @@ body.dark-mode .icon-btn {
     background: #1e293b;
     border-color: #334155;
     color: #fff;
+}
+
+body.dark-mode .main-header .icon-btn,
+body.dark-mode .main-header.scrolled .icon-btn {
+    background: #1e293b;
+    border-color: #334155;
+    color: #fff;
+}
+
+body.dark-mode .main-header .icon-btn:hover,
+body.dark-mode .main-header.scrolled .icon-btn:hover,
+body.dark-mode.home-two-page .icon-btn:hover,
+body.dark-mode .theme-toggle:hover,
+body.dark-mode .rtl-toggle:hover {
+    background: var(--primary) !important;
+    color: #fff !important;
+    border-color: var(--primary) !important;
+}
+
+body.dark-mode .main-header .icon-btn i,
+body.dark-mode .main-header.scrolled .icon-btn i {
+    color: #fff !important;
 }
 
 /* Sections */
@@ -15773,6 +16041,57 @@ body.dark-mode .dropdown-menu .dropdown-item:hover {
 
 }
 
+@media (min-width:768px) and (max-width:991px) {
+
+    .hero-two-images,
+    .dashboard-image,
+    .about-image-wrapper,
+    .faq-image,
+    .our-story-image,
+    .day-image,
+    .approach-image,
+    .eligibility-image,
+    .dashboard-welcome-image,
+    .child-image,
+    .linked-child-image,
+    .program-image,
+    .testimonial-author,
+    .gallery-item {
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .hero-main-image,
+    .hero-small-image,
+    .dashboard-image img,
+    .about-image-wrapper img,
+    .faq-image img,
+    .our-story-image img,
+    .day-image img,
+    .approach-image img,
+    .eligibility-image img,
+    .dashboard-welcome-image img,
+    .child-image img,
+    .linked-child-image img,
+    .program-image img,
+    .testimonial-author img,
+    .gallery-item img {
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .hero-two-images {
+        width: 100%;
+        max-width: 750px;
+    }
+
+    .hero-small-image {
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+}
+
 @media (max-width:767px) {
 
     .floating-rating,
@@ -17361,4 +17680,101 @@ body.dark-mode .navbar-toggler-icon {
         max-width: 100%;
     }
 
+}
+
+/* Header icon buttons */
+
+.header-actions .icon-btn {
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    background: #ffffff;
+    border: 1px solid #dfe8ef;
+    color: #1f2937;
+    transition: all .3s ease;
+}
+
+/* Hover */
+
+.header-actions .icon-btn:hover {
+    background: var(--primary);
+    border-color: var(--primary);
+    color: #ffffff;
+    box-shadow: 0 10px 25px rgba(36, 185, 173, .35);
+    transform: translateY(-2px);
+}
+
+/* Active */
+
+.header-actions .icon-btn:focus,
+.header-actions .icon-btn:active {
+    background: var(--primary);
+    color: #fff;
+    border-color: var(--primary);
+}
+
+/* Dark mode */
+
+body.dark-mode .header-actions .icon-btn {
+    background: #1e293b;
+    border-color: #334155;
+    color: #f8fafc;
+}
+
+body.dark-mode .header-actions .icon-btn:hover {
+    background: var(--primary);
+    border-color: var(--primary);
+    color: #fff;
+}
+
+/*=========================================
+        SOCIAL LOGIN - MOBILE & TABLET
+=========================================*/
+
+@media (max-width: 991px) {
+
+    .social-login {
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+    }
+
+    .social-btn {
+        width: 100%;
+        justify-content: center;
+        padding: 14px 20px;
+    }
+
+}
+
+/*=========================================
+        SIGNUP PAGE TABLET SCROLL FIX
+=========================================*/
+
+@media (min-width:768px) and (max-width:1199px) {
+
+    .register-page .auth-wrapper {
+        height: auto !important;
+        min-height: 100vh !important;
+    }
+
+    .register-page .auth-right {
+        height: 100vh !important;
+        overflow-y: auto !important;
+        overflow-x: hidden !important;
+        padding: 30px !important;
+    }
+
+    .register-page .auth-card {
+        padding-bottom: 60px !important;
+    }
+
+}
+
+/*=========================================
+        ENROLL FORM TOP SPACE
+=========================================*/
+
+.enroll-form-section {
+    padding-top: 160px;
 }
